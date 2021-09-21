@@ -1,0 +1,67 @@
+{
+    "key": "group_60c7d5ee03e8a",
+    "title": "Subscribe Extra Content",
+    "fields": [
+        {
+            "key": "field_60c7d65355ced",
+            "label": "Extra Content Image",
+            "name": "extra_content_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_60c7d608babdd",
+            "label": "Extra Content",
+            "name": "extra_content",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<h2>SHOW YOUR SUPPORT - BECOME A PATRON<\/h2>\r\n<p>Help us continue to deliver top notch content. We work hard at this and are constantly trying to improve - better production, better interviews, better guests. This is truly a passion for us, one that we hope will inspire, inform and be of value for people.<\/p>",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-subscribe.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1623709338
+}

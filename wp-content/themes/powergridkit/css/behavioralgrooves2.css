@@ -1,0 +1,4388 @@
+@charset "UTF-8";
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel, .owl-carousel .owl-item {
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  z-index: 1;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  touch-action: manipulation;
+  -moz-backface-visibility: hidden;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-item, .owl-carousel .owl-wrapper {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-item {
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-touch-callout: none;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+  display: none;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.no-js .owl-carousel, .owl-carousel.owl-loaded {
+  display: block;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+  background: 0 0;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel.owl-refresh .owl-item {
+  visibility: hidden;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel.owl-grab {
+  cursor: move;
+  cursor: grab;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .fadeOut {
+  animation-name: fadeOut;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-height {
+  transition: height .5s ease-in-out;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-item .owl-lazy:not([src]), .owl-carousel .owl-item .owl-lazy[src^=""] {
+  max-height: 0;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-item img.owl-lazy {
+  transform-style: preserve-3d;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url(owl.video.play.png) no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  transition: transform .1s ease;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-video-play-icon:hover {
+  -ms-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-video-playing .owl-video-play-icon, .owl-carousel .owl-video-playing .owl-video-tn {
+  display: none;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity .4s ease;
+}
+
+/* line 6, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.scss */
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+/*
+ * 	Default theme - Owl Carousel CSS File
+ */
+/* line 9, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.theme.scss */
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 13, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.theme.scss */
+.owl-theme .owl-nav [class*='owl-'] {
+  color: #FFF;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #D6D6D6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/* line 22, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.theme.scss */
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: #869791;
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* line 26, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.theme.scss */
+.owl-theme .owl-nav .disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* line 30, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.theme.scss */
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px;
+}
+
+/* line 33, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.theme.scss */
+.owl-theme .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 36, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.theme.scss */
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 40, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.theme.scss */
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 200ms ease;
+  border-radius: 30px;
+}
+
+/* line 49, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_owl.theme.scss */
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #869791;
+}
+
+/* line 1, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  padding: 0;
+  margin: 0;
+  line-height: 1.4em;
+  color: #4a4a4a;
+}
+
+/* line 9, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+body.admin-bar .hamburger {
+  top: 68px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 13, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+  body.admin-bar .menu-main-menu-container.active {
+    top: 120px;
+  }
+}
+
+/* line 18, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+body.admin-bar .search-trigger {
+  top: 70px;
+}
+
+/* line 22, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+body.admin-bar .search-bar.active {
+  margin-top: 29px;
+}
+
+/* line 28, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+h1 {
+  font-weight: 100;
+}
+
+/* line 32, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.contained {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 32, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+  .contained {
+    width: calc(100% - 30px);
+    padding: 0 15px;
+  }
+}
+
+/* line 41, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header {
+  background: #1a1919;
+}
+
+/* line 44, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .contained {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 51, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .branding {
+  display: inline-block;
+  width: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 51, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+  header .branding {
+    position: relative;
+    z-index: 999999;
+  }
+}
+
+/* line 58, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .branding a {
+  display: block;
+  padding: 15px 0;
+}
+
+/* line 62, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .branding a img {
+  width: 100%;
+}
+
+/* line 68, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .menu-main-menu-container {
+  display: inline-block;
+  width: 95%;
+  text-align: right;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 68, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+  header .menu-main-menu-container {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -500px;
+    background: #1a1919;
+    z-index: 999;
+    transition: all 500ms;
+  }
+}
+
+/* line 81, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .menu-main-menu-container ul.menu {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transition: opacity 250ms;
+}
+
+/* line 86, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .menu-main-menu-container ul.menu.search-active {
+  opacity: 0;
+}
+
+/* line 89, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .menu-main-menu-container ul.menu > li {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-left: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 89, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+  header .menu-main-menu-container ul.menu > li {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+/* line 98, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .menu-main-menu-container ul.menu > li a {
+  color: #ffffff;
+  display: block;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 98, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+  header .menu-main-menu-container ul.menu > li a {
+    text-align: center;
+    padding: 1em 0;
+  }
+}
+
+/* line 109, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .menu-main-menu-container ul.menu > li a:hover {
+  color: #439d9d;
+}
+
+/* line 115, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .menu-main-menu-container ul.menu > li.menu-item-has-children ul.sub-menu {
+  margin: 0;
+  padding: 0;
+  max-width: 200px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  top: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 115, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+  header .menu-main-menu-container ul.menu > li.menu-item-has-children ul.sub-menu {
+    display: none !important;
+  }
+}
+
+/* line 126, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .menu-main-menu-container ul.menu > li.menu-item-has-children ul.sub-menu > li {
+  list-style: none;
+  list-style-image: none;
+  text-align: left;
+}
+
+/* line 131, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .menu-main-menu-container ul.menu > li.menu-item-has-children ul.sub-menu > li a {
+  display: block;
+  padding: 1em;
+  white-space: nowrap;
+  text-transform: none;
+}
+
+/* line 137, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .menu-main-menu-container ul.menu > li.menu-item-has-children ul.sub-menu > li a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* line 145, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .menu-main-menu-container ul.menu > li.menu-item-has-children:hover a {
+  color: #439d9d;
+}
+
+/* line 149, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .menu-main-menu-container ul.menu > li.menu-item-has-children:hover ul.sub-menu {
+  display: block;
+  border-top: solid 2px #439d9d;
+  margin-top: 8px;
+  z-index: 9999;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 149, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+  header .menu-main-menu-container ul.menu > li.menu-item-has-children:hover ul.sub-menu {
+    margin-top: 46px;
+  }
+}
+
+/* line 159, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .menu-main-menu-container ul.menu > li.menu-item-has-children:hover ul.sub-menu li a {
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* line 165, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .menu-main-menu-container ul.menu > li.menu-item-has-children:hover ul.sub-menu li a:hover {
+  color: #a2d7d7;
+}
+
+/* line 175, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .menu-main-menu-container ul.menu > li.current-menu-item a {
+  color: #439d9d;
+}
+
+/* line 181, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+header .menu-main-menu-container.active {
+  top: 79px;
+}
+
+/* line 187, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+footer {
+  background: #1a1919;
+  color: #ffffff;
+  padding: 50px 0;
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* line 193, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+footer h6 {
+  color: #439d9d;
+  font-size: 24px;
+  margin-bottom: 25px;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 193, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+  footer h6 {
+    font-size: 16px;
+  }
+}
+
+/* line 203, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+footer .socials {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  width: 600px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 203, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+  footer .socials {
+    width: 100%;
+  }
+}
+
+/* line 212, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+footer .socials a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 212, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+  footer .socials a {
+    margin-left: 0;
+  }
+}
+
+/* line 223, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+footer .socials a img {
+  width: 30px;
+  margin-top: 10px;
+}
+
+/* line 228, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+footer .socials a.instagram img {
+  width: 40px;
+  margin-top: 5px;
+}
+
+/* line 236, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0 50px 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* line 244, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+footer .disclaimer {
+  font-size: 10px;
+  line-height: 13px;
+}
+
+/* line 247, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+footer .disclaimer a {
+  color: #ffffff;
+}
+
+/* line 253, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+p.powerpress_links {
+  display: none;
+}
+
+/* line 257, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.search-trigger {
+  position: absolute;
+  top: 26px;
+  right: 24px;
+  width: 28px;
+  height: 38px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 257, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+  .search-trigger {
+    display: none;
+  }
+}
+
+/* line 267, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.search-trigger a {
+  display: block;
+}
+
+/* line 270, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.search-trigger a img {
+  width: 100%;
+}
+
+/* line 276, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.search-bar {
+  height: 110px;
+  width: 960px;
+  margin: 0 auto;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  margin-top: -250px;
+  transition: all 500ms;
+}
+
+/* line 286, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.search-bar .searchform {
+  margin-bottom: 0;
+  line-height: 120px;
+}
+
+/* line 290, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.search-bar .searchform label {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+/* line 295, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.search-bar .searchform input[type="text"] {
+  font-size: 24px;
+  border: solid 1px #439d9d;
+  background: #000000;
+  color: #ffffff;
+  padding: 0.25em 1em;
+}
+
+/* line 302, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.search-bar .searchform input[type="text"]:active, .search-bar .searchform input[type="text"]:focus {
+  outline: none;
+}
+
+/* line 308, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.search-bar .searchform input[type="submit"] {
+  font-size: 18px;
+  background: #439d9d;
+  color: #ffffff;
+  border: solid 1px #439d9d;
+  padding: 9px 16px 10px;
+  position: relative;
+  top: -3px;
+  left: -4px;
+}
+
+/* line 320, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.search-bar.active {
+  margin-top: 0;
+}
+
+/* line 327, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.search-results h1 em {
+  font-style: normal;
+  font-weight: 500;
+  color: #0b385b;
+}
+
+/* line 335, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.search-results .content-area article {
+  border-top: solid 1px rgba(0, 0, 0, 0.25);
+}
+
+/* line 338, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.search-results .content-area article:first-child {
+  border-top: none;
+}
+
+/* line 342, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.search-results .content-area article h2 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* line 346, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.search-results .content-area article h2 a {
+  color: #439d9d;
+  text-decoration: none;
+}
+
+/* line 350, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.search-results .content-area article h2 a:hover {
+  color: #0b385b;
+  text-decoration: underline;
+}
+
+/* line 360, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 999999;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 360, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+  .hamburger {
+    display: block;
+  }
+}
+
+/* line 369, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 30px;
+  background: #ffffff;
+  margin-bottom: 10px;
+  transition: all 250ms;
+  position: relative;
+}
+
+/* line 379, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.hamburger.active span.top {
+  transform: rotate(45deg);
+  top: 12px;
+}
+
+/* line 383, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.hamburger.active span.mid {
+  width: 0;
+  left: 15px;
+}
+
+/* line 387, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.hamburger.active span.bot {
+  transform: rotate(-45deg);
+  top: -12px;
+}
+
+/* line 395, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: solid 1px rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 395, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="email"],
+  .wpcf7 textarea {
+    max-width: 100%;
+  }
+}
+
+/* line 406, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+.wpcf7 input[type="submit"] {
+  background: #439d9d;
+  color: #ffffff;
+  display: block;
+  font-size: 16px;
+  padding: 0.5em 2em;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 406, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
+  .wpcf7 input[type="submit"] {
+    width: 100%;
+    padding: 2em;
+  }
+}
+
+/* line 2, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .hero {
+  background-color: rgba(0, 0, 0, 0.75);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  height: 37vw;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 2, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .hero {
+    height: 290px;
+  }
+}
+
+/* line 14, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .hero .overlay {
+  position: absolute;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 37vw;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 14, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .hero .overlay {
+    height: 291px;
+  }
+}
+
+/* line 24, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .hero video {
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+}
+
+@media only screen and (min-width: 769px) {
+  /* line 24, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .hero video {
+    top: -7vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 24, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .hero video {
+    height: 370px;
+  }
+}
+
+/* line 36, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .hero .intro {
+  position: relative;
+}
+
+/* line 38, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .hero .intro .content {
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+  top: 8vw;
+}
+
+/* line 44, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .hero .intro .content h1 {
+  text-align: center;
+  line-height: 1.3;
+  font-size: clamp(1rem, 3vmin, 3rem);
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 44, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .hero .intro .content h1 {
+    font-size: 20px;
+  }
+}
+
+/* line 54, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .hero .intro .content h1 span {
+  display: block;
+  font-size: 125%;
+  font-weight: bolder;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 54, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .hero .intro .content h1 span {
+    font-size: 20px;
+  }
+}
+
+/* line 64, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .hero .intro .content img {
+  width: 60vw;
+  max-width: 100%;
+}
+
+/* line 73, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .current-episode {
+  background: #1a1919;
+  padding: 20px;
+  color: #ffffff;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 78, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .current-episode .contained {
+    padding: 0;
+  }
+}
+
+/* line 83, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .current-episode .episode {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 83, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .current-episode .episode {
+    display: block;
+  }
+}
+
+/* line 91, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .current-episode .episode .image {
+  display: inline-block;
+  width: 125px;
+  margin-right: 50px;
+  vertical-align: top;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 91, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .current-episode .episode .image {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+}
+
+/* line 101, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .current-episode .episode .image img {
+  width: 100%;
+  margin-right: 10px;
+  border-radius: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 101, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .current-episode .episode .image img {
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 200px;
+  }
+}
+
+/* line 112, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .current-episode .episode .content {
+  margin-top: 10px;
+}
+
+/* line 115, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .current-episode .episode .content h2 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 115, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .current-episode .episode .content h2 {
+    font-size: 16px;
+  }
+}
+
+/* line 124, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .current-episode .episode .content h4 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 124, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .current-episode .episode .content h4 {
+    font-size: 14px;
+  }
+}
+
+/* line 131, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .current-episode .episode .content h4 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* line 138, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .current-episode .episode .content .powerpress_player .mejs-container, .home .current-episode .episode .content .powerpress_player .mejs-container .mejs-controls, .home .current-episode .episode .content .powerpress_player .mejs-embed, .home .current-episode .episode .content .powerpress_player .mejs-embed body {
+  background: #1a1919;
+  margin-top: 15px;
+}
+
+/* line 141, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .current-episode .episode .content .powerpress_player .mejs-container .mejs-controls, .home .current-episode .episode .content .powerpress_player .mejs-container .mejs-controls .mejs-controls, .home .current-episode .episode .content .powerpress_player .mejs-embed .mejs-controls, .home .current-episode .episode .content .powerpress_player .mejs-embed body .mejs-controls {
+  padding: 0;
+}
+
+/* line 144, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .current-episode .episode .content .powerpress_player .mejs-container .mejs-controls .mejs-playpause-button.mejs-play button, .home .current-episode .episode .content .powerpress_player .mejs-container .mejs-controls .mejs-controls .mejs-playpause-button.mejs-play button, .home .current-episode .episode .content .powerpress_player .mejs-embed .mejs-controls .mejs-playpause-button.mejs-play button, .home .current-episode .episode .content .powerpress_player .mejs-embed body .mejs-controls .mejs-playpause-button.mejs-play button {
+  border: solid 3px #ffffff;
+  border-radius: 50%;
+  padding: 12px;
+  background-position: 3px 3px;
+  position: relative;
+  top: -5px;
+  left: -5px;
+}
+
+/* line 154, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .current-episode .episode .content .powerpress_player .mejs-container .mejs-controls .mjes-time-rail,
+.home .current-episode .episode .content .powerpress_player .mejs-container .mejs-controls .mejs-time-slider,
+.home .current-episode .episode .content .powerpress_player .mejs-container .mejs-controls .mejs-horizontal-volume-total,
+.home .current-episode .episode .content .powerpress_player .mejs-container .mejs-controls .mejs-horizontal-volume-current, .home .current-episode .episode .content .powerpress_player .mejs-container .mejs-controls .mejs-controls .mjes-time-rail,
+.home .current-episode .episode .content .powerpress_player .mejs-container .mejs-controls .mejs-controls .mejs-time-slider,
+.home .current-episode .episode .content .powerpress_player .mejs-container .mejs-controls .mejs-controls .mejs-horizontal-volume-total,
+.home .current-episode .episode .content .powerpress_player .mejs-container .mejs-controls .mejs-controls .mejs-horizontal-volume-current, .home .current-episode .episode .content .powerpress_player .mejs-embed .mejs-controls .mjes-time-rail,
+.home .current-episode .episode .content .powerpress_player .mejs-embed .mejs-controls .mejs-time-slider,
+.home .current-episode .episode .content .powerpress_player .mejs-embed .mejs-controls .mejs-horizontal-volume-total,
+.home .current-episode .episode .content .powerpress_player .mejs-embed .mejs-controls .mejs-horizontal-volume-current, .home .current-episode .episode .content .powerpress_player .mejs-embed body .mejs-controls .mjes-time-rail,
+.home .current-episode .episode .content .powerpress_player .mejs-embed body .mejs-controls .mejs-time-slider,
+.home .current-episode .episode .content .powerpress_player .mejs-embed body .mejs-controls .mejs-horizontal-volume-total,
+.home .current-episode .episode .content .powerpress_player .mejs-embed body .mejs-controls .mejs-horizontal-volume-current {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* line 169, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes {
+  background: #0b385b;
+  padding: 40px 0;
+}
+
+/* line 172, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes.featured {
+  background: #439d9d;
+}
+
+/* line 175, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes h2 {
+  font-size: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* line 180, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .item {
+  overflow: hidden;
+}
+
+/* line 182, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .item .inner {
+  position: relative;
+}
+
+/* line 184, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .item .inner .image {
+  overflow: hidden;
+  border-radius: 300px;
+}
+
+/* line 187, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .item .inner .image img {
+  margin: 0 auto;
+  max-height: 200px;
+  max-width: 200px;
+  border-radius: 300px;
+  margin-bottom: 10px;
+}
+
+/* line 195, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .item .inner .content {
+  text-align: center;
+}
+
+/* line 197, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .item .inner .content a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* line 201, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .item .inner .content h5 {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* line 205, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .item .inner .content h4 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* line 209, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .item .inner .content p {
+  line-height: 1.2;
+}
+
+/* line 217, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .episode-carousel .owl-nav {
+  position: absolute;
+  top: 18%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 217, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .episodes .episode-carousel .owl-nav {
+    display: none;
+  }
+}
+
+/* line 225, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .episode-carousel .owl-nav button {
+  font-size: 300px;
+  color: #000000;
+  position: absolute;
+  transition: all 500ms;
+}
+
+/* line 232, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .episode-carousel .owl-nav button div.nav-btn {
+  width: 75px;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+
+/* line 238, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .episode-carousel .owl-nav button.owl-prev {
+  left: -80px;
+}
+
+/* line 241, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .episode-carousel .owl-nav button.owl-prev .nav-btn {
+  background-image: url("../img/icons/angle-left-solid-reverse.svg");
+}
+
+/* line 246, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .episode-carousel .owl-nav button.owl-next {
+  right: -80px;
+}
+
+/* line 249, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .episode-carousel .owl-nav button.owl-next .nav-btn {
+  background-image: url("../img/icons/angle-right-solid-reverse.svg");
+}
+
+/* line 254, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .episode-carousel .owl-nav button:hover {
+  opacity: 1;
+}
+
+/* line 258, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .episodes .episode-carousel .owl-nav button:active, .home .episodes .episode-carousel .owl-nav button:focus {
+  outline: none;
+}
+
+/* line 267, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .about {
+  margin: 40px 0 50px 0;
+}
+
+/* line 269, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .about h2 {
+  color: #0b385b;
+  line-height: 1.25;
+}
+
+/* line 277, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .newsletter-signup {
+  background: #1a1919;
+  padding: 25px 0;
+}
+
+/* line 280, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .newsletter-signup .newsletter-widget {
+  width: 100%;
+}
+
+/* line 282, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .newsletter-signup .newsletter-widget label {
+  color: #e19715;
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* line 288, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .newsletter-signup .newsletter-widget .mc4wp-form.mc4wp-form-421 {
+  margin-bottom: 0;
+}
+
+/* line 290, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .newsletter-signup .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+/* line 296, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .newsletter-signup .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields p {
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+/* line 300, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .newsletter-signup .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields p label {
+  display: block;
+  font-size: 10px;
+}
+
+/* line 303, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .newsletter-signup .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields p label.sr-only {
+  display: none;
+}
+
+/* line 307, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .newsletter-signup .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields p input {
+  display: block;
+  font-size: 18px;
+  width: 100%;
+  padding: 5px;
+}
+
+/* line 313, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .newsletter-signup .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields p input[type="email"] {
+  position: relative;
+  width: 300px;
+  border: solid 1px white;
+}
+
+/* line 320, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .newsletter-signup .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields p.submit {
+  margin: 0;
+}
+
+/* line 323, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .newsletter-signup .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields input[type="submit"] {
+  background: #FF6600;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'Red Hat Display';
+  border: none;
+  font-size: 18px;
+  width: 100%;
+  text-transform: uppercase;
+  border-radius: 0;
+  height: 33px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 323, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .newsletter-signup .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields input[type="submit"] {
+    border-radius: 4px;
+    margin-top: 15px;
+    height: auto;
+    padding: 0.25em 1em;
+  }
+}
+
+/* line 342, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .newsletter-signup .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields input[type="submit"]:hover {
+  cursor: pointer;
+  color: #1a1919;
+  background: #e19715;
+}
+
+/* line 353, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .patreon {
+  padding: 25px 0;
+  text-align: center;
+  background: #1a1919;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 357, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .patreon .contained {
+    padding: 0;
+  }
+}
+
+/* line 362, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .patreon a {
+  color: #e19715;
+  font-weight: 700;
+  font-size: 25px;
+  text-decoration: none;
+  background-image: url("../img/patreon-mic.png");
+  background-repeat: no-repeat;
+  background-position: 8% 0;
+  background-size: 30px;
+  padding-left: 45px;
+  line-height: 52px;
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 362, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .patreon a {
+    font-size: 20px;
+    line-height: 30px;
+    background-position: 6% 20px;
+  }
+}
+
+/* line 379, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .patreon a:hover {
+  color: #ffffff;
+}
+
+/* line 385, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews {
+  background: #ffffff;
+  padding: 25px 0;
+  color: #4a4a4a;
+}
+
+/* line 389, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews h2 {
+  color: #439d9d;
+  text-align: center;
+  padding-bottom: 25px;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 395, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .reviews .contained {
+    padding: 0;
+  }
+}
+
+/* line 400, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews .contained p {
+  text-align: center;
+}
+
+/* line 403, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews .review-container {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.25);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 403, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .reviews .review-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ".";
+  }
+}
+
+/* line 413, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews .review-container .owl-nav {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  background: red;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 413, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .reviews .review-container .owl-nav {
+    display: none;
+  }
+}
+
+/* line 423, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews .review-container .owl-nav button {
+  position: absolute;
+  transition: all 500ms;
+}
+
+/* line 427, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews .review-container .owl-nav button div.nav-btn {
+  width: 75px;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+
+/* line 433, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews .review-container .owl-nav button.owl-prev {
+  left: -80px;
+}
+
+/* line 436, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews .review-container .owl-nav button.owl-prev .nav-btn {
+  background-image: url("../img/icons/angle-left-solid.svg");
+}
+
+/* line 441, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews .review-container .owl-nav button.owl-next {
+  right: -80px;
+}
+
+/* line 444, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews .review-container .owl-nav button.owl-next .nav-btn {
+  background-image: url("../img/icons/angle-right-solid.svg");
+}
+
+/* line 449, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews .review-container .owl-nav button:hover {
+  opacity: 1;
+}
+
+/* line 453, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews .review-container .owl-nav button:active, .home .reviews .review-container .owl-nav button:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 459, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .reviews .review-container .review {
+    padding: 0 20px;
+  }
+}
+
+/* line 463, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews .review-container .review img {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+}
+
+/* line 469, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews .review-container .review h3 {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+/* line 478, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews .review-container .review p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* line 486, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .reviews .review-container .review h5 {
+  font-weight: normal;
+  font-style: italic;
+  margin-top: 0;
+}
+
+/* line 495, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .consulting {
+  padding-bottom: 40px;
+}
+
+/* line 497, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .consulting h2 {
+  text-align: center;
+  color: #439d9d;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 502, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .consulting .contained {
+    padding: 0;
+  }
+}
+
+/* line 507, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .consulting .consultants {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+/* line 512, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .consulting .consultants .consultant {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 48%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 512, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .consulting .consultants .consultant {
+    flex-flow: row wrap;
+    width: 100%;
+  }
+}
+
+/* line 522, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .consulting .consultants .consultant .image img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 522, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .consulting .consultants .consultant .image img {
+    width: 150px;
+  }
+}
+
+/* line 530, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .consulting .consultants .consultant .content {
+  padding-left: 30px;
+}
+
+/* line 531, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .consulting .consultants .consultant .content a {
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
+/* line 534, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .consulting .consultants .consultant .content a:hover {
+  color: #FF6600;
+}
+
+/* line 536, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .consulting .consultants .consultant .content a:hover h4 {
+  color: #FF6600;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 530, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .consulting .consultants .consultant .content {
+    padding-left: 10px;
+  }
+}
+
+/* line 545, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .consulting .consultants .consultant .content h3 {
+  line-height: 1.3em;
+  width: 130px;
+}
+
+/* line 549, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .consulting .consultants .consultant .content h4 {
+  color: #439d9d;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+/* line 555, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .consulting .consultants .consultant .content h5 {
+  font-size: 16px;
+  margin-top: 0;
+}
+
+/* line 564, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .video {
+  background: #000000;
+}
+
+/* line 566, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .video iframe {
+  width: 100%;
+}
+
+@media only screen and (min-width: 769px) {
+  /* line 566, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .video iframe {
+    height: 540px;
+  }
+}
+
+/* line 574, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .products {
+  padding-bottom: 40px;
+}
+
+/* line 576, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .products h2 {
+  color: #439d9d;
+  text-align: center;
+}
+
+/* line 580, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .products .product-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+/* line 584, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .products .product-container .item {
+  width: 33%;
+}
+
+/* line 586, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+.home .products .product-container .item img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 584, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .products .product-container .item {
+    width: 33%;
+  }
+  /* line 592, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_home.scss */
+  .home .products .product-container .item img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .meetup_events-template-default,
+  .page-template-template-artists,
+  .page-template-template-episodes,
+  .page-template-template-meetups,
+  .page-template-template-subpage,
+  .single-blogentry,
+  .single-newsletter,
+  .single-post {
+    background-attachment: scroll;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  /* line 1, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .meetup_events-template-default,
+  .page-template-template-artists,
+  .page-template-template-episodes,
+  .page-template-template-meetups,
+  .page-template-template-subpage,
+  .single-blogentry,
+  .single-newsletter,
+  .single-post {
+    background-size: cover;
+  }
+}
+
+/* line 16, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.meetup_events-template-default h1,
+.page-template-template-artists h1,
+.page-template-template-episodes h1,
+.page-template-template-meetups h1,
+.page-template-template-subpage h1,
+.single-blogentry h1,
+.single-newsletter h1,
+.single-post h1 {
+  padding: 30px 0 20px;
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 16, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .meetup_events-template-default h1,
+  .page-template-template-artists h1,
+  .page-template-template-episodes h1,
+  .page-template-template-meetups h1,
+  .page-template-template-subpage h1,
+  .single-blogentry h1,
+  .single-newsletter h1,
+  .single-post h1 {
+    padding-left: 15px;
+  }
+}
+
+/* line 27, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.meetup_events-template-default h3 a,
+.page-template-template-artists h3 a,
+.page-template-template-episodes h3 a,
+.page-template-template-meetups h3 a,
+.page-template-template-subpage h3 a,
+.single-blogentry h3 a,
+.single-newsletter h3 a,
+.single-post h3 a {
+  color: #0b385b;
+}
+
+/* line 33, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.meetup_events-template-default p a,
+.page-template-template-artists p a,
+.page-template-template-episodes p a,
+.page-template-template-meetups p a,
+.page-template-template-subpage p a,
+.single-blogentry p a,
+.single-newsletter p a,
+.single-post p a {
+  color: #439d9d;
+}
+
+/* line 40, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes h1 {
+  color: #439d9d;
+  margin-top: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 40, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-episodes h1 {
+    line-height: 1.1;
+    margin-top: 0;
+  }
+}
+
+/* line 52, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes a.showmore {
+  color: #ffffff;
+}
+
+/* line 56, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar {
+  background: #ffffff;
+  max-width: 960px;
+  margin: 15px auto;
+  padding: 15px 0;
+  display: grid;
+  grid-template-columns: 0.35fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". .";
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 56, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-episodes .filter-bar {
+    display: block;
+    padding: 0 20px;
+  }
+}
+
+/* line 70, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .selector {
+  vertical-align: top;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 70, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-episodes .filter-bar .selector {
+    width: 100%;
+    padding-left: 5px;
+  }
+}
+
+/* line 77, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .selector h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* line 81, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .selector h2 .filter {
+  color: #439d9d;
+  display: none;
+}
+
+/* line 85, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .selector h2 .filter.active-filter {
+  display: inline;
+}
+
+/* line 89, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .selector h2 .filter i {
+  font-style: normal;
+  font-size: 18px;
+  margin-left: 10px;
+  display: none;
+}
+
+/* line 96, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .selector h2 .filter:hover {
+  cursor: pointer;
+}
+
+/* line 104, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list h6 {
+  margin: 0;
+  padding-left: 5px;
+}
+
+/* line 109, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud {
+  padding-top: 0;
+  font-family: sans-serif;
+}
+
+/* line 112, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud a {
+  display: inline-flex;
+  margin: 5px;
+  line-height: 15px;
+  padding-top: 0.25em;
+}
+
+/* line 118, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud a.tag-selected {
+  background: #FF6600;
+}
+
+/* line 121, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud a.tag-selected:before {
+  content: '×';
+  padding-right: 3px;
+  position: relative;
+  top: 1px;
+  font-size: 21px;
+  line-height: 9px;
+}
+
+/* line 130, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud a.tag-selected:hover {
+  background: #FF6600;
+}
+
+/* line 135, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud a.showmore {
+  background: none;
+  color: #4a4a4a;
+  color: #439d9d;
+}
+
+/* line 140, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud a.showmore:hover {
+  color: #FF6600;
+}
+
+/* line 144, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud a.showmore span.less {
+  display: none;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+/* line 150, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud a.showmore span.more {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+/* line 155, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud a.showmore.active {
+  color: #FF6600;
+}
+
+/* line 158, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud a.showmore.active span.less {
+  display: inline;
+}
+
+/* line 162, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud a.showmore.active span.more {
+  display: none;
+}
+
+/* line 169, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud.secondary-tags {
+  display: none;
+}
+
+/* line 172, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud.secondary-tags a {
+  background: rgba(0, 0, 0, 0.5);
+  padding-top: 0.2em;
+  line-height: 13px;
+  font-weight: 400;
+  margin-right: -5px;
+}
+
+/* line 184, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud.secondary-tags a:hover {
+  background: #439d9d;
+}
+
+/* line 188, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud.secondary-tags a:before {
+  top: 2px;
+  font-size: 16px;
+  line-height: 9px;
+}
+
+/* line 194, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud.secondary-tags a.tag-selected {
+  background: #FF6600;
+}
+
+/* line 197, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud.secondary-tags a.tag-selected:before {
+  content: '×';
+  padding-right: 3px;
+  position: relative;
+  top: 0;
+  font-size: 16px;
+  line-height: 11px;
+}
+
+/* line 206, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .filter-bar .tag-list .tag-cloud.secondary-tags a.tag-selected:hover {
+  background: #FF6600;
+}
+
+/* line 216, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .grid-container-episiodes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". . .";
+  max-width: 960px;
+  grid-gap: 15px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 216, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-episodes .grid-container-episiodes {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". .";
+  }
+}
+
+/* line 231, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .grid-container-episiodes .episode {
+  overflow: hidden;
+}
+
+/* line 233, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .grid-container-episiodes .episode .inner {
+  position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 233, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-episodes .grid-container-episiodes .episode .inner {
+    padding: 0 7.5px;
+  }
+}
+
+/* line 238, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .grid-container-episiodes .episode .inner .image {
+  overflow: hidden;
+  border-radius: 300px;
+  text-align: center;
+}
+
+/* line 242, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .grid-container-episiodes .episode .inner .image img {
+  margin: 0 auto;
+  max-height: 200px;
+  max-width: 200px;
+  border-radius: 300px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 242, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-episodes .grid-container-episiodes .episode .inner .image img {
+    width: 100px;
+  }
+}
+
+/* line 253, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .grid-container-episiodes .episode .inner .content {
+  text-align: center;
+}
+
+/* line 255, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .grid-container-episiodes .episode .inner .content a {
+  text-decoration: none;
+  color: #0F2522;
+}
+
+/* line 259, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .grid-container-episiodes .episode .inner .content h5 {
+  font-size: 18px;
+  margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 259, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-episodes .grid-container-episiodes .episode .inner .content h5 {
+    font-size: 14px;
+  }
+}
+
+/* line 266, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .grid-container-episiodes .episode .inner .content h4 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 266, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-episodes .grid-container-episiodes .episode .inner .content h4 {
+    font-size: 14px;
+    line-height: 1;
+  }
+}
+
+/* line 274, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-episodes .grid-container-episiodes .episode .inner .content p {
+  line-height: 1.2;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 274, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-episodes .grid-container-episiodes .episode .inner .content p {
+    font-size: 12px;
+  }
+}
+
+/* line 290, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry h1,
+.single-newsletter h1,
+.single-post h1 {
+  color: #439d9d;
+  font-weight: 300;
+  font-size: 24px;
+  padding: 0;
+}
+
+/* line 297, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .post-container,
+.single-newsletter .post-container,
+.single-post .post-container {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 297, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .single-blogentry .post-container,
+  .single-newsletter .post-container,
+  .single-post .post-container {
+    margin-top: 90px;
+    margin-bottom: 0;
+  }
+}
+
+/* line 306, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .grid-container,
+.single-newsletter .grid-container,
+.single-post .grid-container {
+  display: grid;
+  grid-template-columns: 66% 33%;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". .";
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 306, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .single-blogentry .grid-container,
+  .single-newsletter .grid-container,
+  .single-post .grid-container {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+/* line 320, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .post-area,
+.single-newsletter .post-area,
+.single-post .post-area {
+  padding: 15px;
+  background: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 320, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .single-blogentry .post-area,
+  .single-newsletter .post-area,
+  .single-post .post-area {
+    order: 2;
+    width: 100%;
+  }
+}
+
+/* line 328, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .post-area h1,
+.single-newsletter .post-area h1,
+.single-post .post-area h1 {
+  line-height: 1;
+}
+
+/* line 332, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .post-area pre,
+.single-newsletter .post-area pre,
+.single-post .post-area pre {
+  font-size: 10px;
+  line-height: 9px;
+  margin-top: 0;
+}
+
+/* line 338, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .post-area li,
+.single-blogentry .post-area p,
+.single-newsletter .post-area li,
+.single-newsletter .post-area p,
+.single-post .post-area li,
+.single-post .post-area p {
+  font-size: 16px;
+  line-height: 1.9;
+  font-weight: 300;
+}
+
+/* line 344, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .post-area li a,
+.single-blogentry .post-area p a,
+.single-newsletter .post-area li a,
+.single-newsletter .post-area p a,
+.single-post .post-area li a,
+.single-post .post-area p a {
+  color: #FF6600 !important;
+}
+
+/* line 349, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .post-area li,
+.single-newsletter .post-area li,
+.single-post .post-area li {
+  margin-bottom: 15px;
+}
+
+/* line 353, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .post-area img,
+.single-newsletter .post-area img,
+.single-post .post-area img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 359, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area,
+.single-newsletter .side-area,
+.single-post .side-area {
+  background: #f3f3f3;
+  background: -moz-linear-gradient(top, #f3f3f3 0%, #F0EDE3 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f3f3f3), color-stop(100%, #F0EDE3));
+  background: -webkit-linear-gradient(top, #f3f3f3 0%, #F0EDE3 100%);
+  background: -o-linear-gradient(top, #f3f3f3 0%, #F0EDE3 100%);
+  background: -ms-linear-gradient(top, #f3f3f3 0%, #F0EDE3 100%);
+  background: linear-gradient(to bottom, #f3f3f3 0%, #F0EDE3 100%);
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 359, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .single-blogentry .side-area,
+  .single-newsletter .side-area,
+  .single-post .side-area {
+    order: 1;
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  /* line 366, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .single-blogentry .side-area h3.title,
+  .single-newsletter .side-area h3.title,
+  .single-post .side-area h3.title {
+    display: block;
+    font-size: 24px;
+    padding: 15px 15px 0;
+    margin: 0;
+    color: #439d9d;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+}
+
+/* line 377, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area h2,
+.single-newsletter .side-area h2,
+.single-post .side-area h2 {
+  font-size: 14px;
+  text-align: right;
+  background: #0b385b;
+  border-bottom: solid 4px #439d9d;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0;
+  padding: 1.3em 1em 1.3em 0;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 377, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .single-blogentry .side-area h2,
+  .single-newsletter .side-area h2,
+  .single-post .side-area h2 {
+    text-align: center;
+  }
+}
+
+/* line 390, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area h2 span,
+.single-newsletter .side-area h2 span,
+.single-post .side-area h2 span {
+  color: #e19715;
+  margin-right: 15px;
+  text-transform: uppercase;
+}
+
+/* line 397, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area h3,
+.single-newsletter .side-area h3,
+.single-post .side-area h3 {
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 769px) {
+  /* line 400, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .single-blogentry .side-area h3.title,
+  .single-newsletter .side-area h3.title,
+  .single-post .side-area h3.title {
+    display: none;
+  }
+}
+
+/* line 406, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .bonus-tracks,
+.single-newsletter .side-area .bonus-tracks,
+.single-post .side-area .bonus-tracks {
+  padding: 0 15px;
+  padding-top: 0;
+}
+
+/* line 409, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .bonus-tracks ul,
+.single-newsletter .side-area .bonus-tracks ul,
+.single-post .side-area .bonus-tracks ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* line 413, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .bonus-tracks ul li a,
+.single-newsletter .side-area .bonus-tracks ul li a,
+.single-post .side-area .bonus-tracks ul li a {
+  color: #4a4a4a;
+}
+
+/* line 418, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .bonus-tracks h3,
+.single-newsletter .side-area .bonus-tracks h3,
+.single-post .side-area .bonus-tracks h3 {
+  font-weight: 100;
+  font-size: 18px;
+  color: #0b385b;
+}
+
+/* line 424, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .extra-info,
+.single-newsletter .side-area .extra-info,
+.single-post .side-area .extra-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". .";
+}
+
+/* line 430, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .extra-info .guest,
+.single-newsletter .side-area .extra-info .guest,
+.single-post .side-area .extra-info .guest {
+  padding-left: 15px;
+}
+
+/* line 433, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .extra-info .guest h3,
+.single-newsletter .side-area .extra-info .guest h3,
+.single-post .side-area .extra-info .guest h3 {
+  font-weight: 100;
+  font-size: 18px;
+  color: #0b385b;
+}
+
+/* line 440, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .extra-info .guest .image img,
+.single-newsletter .side-area .extra-info .guest .image img,
+.single-post .side-area .extra-info .guest .image img {
+  width: 100%;
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
+
+/* line 447, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .extra-info .guest h5,
+.single-newsletter .side-area .extra-info .guest h5,
+.single-post .side-area .extra-info .guest h5 {
+  color: #0b385b;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* line 453, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .extra-info .guest h5 a,
+.single-newsletter .side-area .extra-info .guest h5 a,
+.single-post .side-area .extra-info .guest h5 a {
+  color: #0b385b;
+  text-decoration: none;
+}
+
+/* line 460, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .extra-info .music,
+.single-newsletter .side-area .extra-info .music,
+.single-post .side-area .extra-info .music {
+  padding-right: 15px;
+  text-align: right;
+}
+
+/* line 464, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .extra-info .music h3,
+.single-newsletter .side-area .extra-info .music h3,
+.single-post .side-area .extra-info .music h3 {
+  font-weight: 100;
+  font-size: 18px;
+  color: #0b385b;
+}
+
+/* line 470, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .extra-info .music p,
+.single-newsletter .side-area .extra-info .music p,
+.single-post .side-area .extra-info .music p {
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+/* line 476, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .extra-info .music p a,
+.single-newsletter .side-area .extra-info .music p a,
+.single-post .side-area .extra-info .music p a {
+  color: #FF6600;
+}
+
+/* line 483, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .play-options,
+.single-newsletter .side-area .play-options,
+.single-post .side-area .play-options {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+/* line 486, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .play-options h4,
+.single-newsletter .side-area .play-options h4,
+.single-post .side-area .play-options h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* line 492, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .play-options ul,
+.single-newsletter .side-area .play-options ul,
+.single-post .side-area .play-options ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 503, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .play-options ul li a,
+.single-newsletter .side-area .play-options ul li a,
+.single-post .side-area .play-options ul li a {
+  font-weight: normal;
+  color: #0b385b;
+  padding-right: 5px;
+  font-size: 14px;
+}
+
+/* line 508, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .play-options ul li a img,
+.single-newsletter .side-area .play-options ul li a img,
+.single-post .side-area .play-options ul li a img {
+  width: 50px;
+  height: auto;
+}
+
+/* line 512, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .play-options ul li a:hover,
+.single-newsletter .side-area .play-options ul li a:hover,
+.single-post .side-area .play-options ul li a:hover {
+  color: #FF6600;
+}
+
+/* line 520, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .links,
+.single-newsletter .side-area .links,
+.single-post .side-area .links {
+  padding: 0 15px;
+}
+
+/* line 523, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .links ul,
+.single-newsletter .side-area .links ul,
+.single-post .side-area .links ul {
+  padding-left: 20px;
+}
+
+/* line 526, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .links ul li,
+.single-newsletter .side-area .links ul li,
+.single-post .side-area .links ul li {
+  margin-bottom: 10px;
+}
+
+/* line 531, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .links li,
+.single-blogentry .side-area .links p,
+.single-newsletter .side-area .links li,
+.single-newsletter .side-area .links p,
+.single-post .side-area .links li,
+.single-post .side-area .links p {
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* line 539, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .links li a,
+.single-blogentry .side-area .links p a,
+.single-newsletter .side-area .links li a,
+.single-newsletter .side-area .links p a,
+.single-post .side-area .links li a,
+.single-post .side-area .links p a {
+  color: #FF6600 !important;
+}
+
+/* line 545, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .archives,
+.single-blogentry .side-area .tags,
+.single-blogentry .side-area .transcript,
+.single-newsletter .side-area .archives,
+.single-newsletter .side-area .tags,
+.single-newsletter .side-area .transcript,
+.single-post .side-area .archives,
+.single-post .side-area .tags,
+.single-post .side-area .transcript {
+  padding: 0 15px;
+}
+
+/* line 552, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .tags .tag-cloud,
+.single-newsletter .side-area .tags .tag-cloud,
+.single-post .side-area .tags .tag-cloud {
+  padding-top: 0;
+}
+
+/* line 557, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .transcript,
+.single-newsletter .side-area .transcript,
+.single-post .side-area .transcript {
+  padding-bottom: 20px;
+}
+
+/* line 560, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .transcript a,
+.single-newsletter .side-area .transcript a,
+.single-post .side-area .transcript a {
+  display: block;
+  border-radius: 2px;
+  background: #439d9d;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.25em 0;
+  text-decoration: none;
+  transition: all 500ms;
+  font-size: 14px;
+}
+
+/* line 572, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .transcript a:hover,
+.single-newsletter .side-area .transcript a:hover,
+.single-post .side-area .transcript a:hover {
+  background: #2c6767;
+}
+
+/* line 579, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .archives h3,
+.single-newsletter .side-area .archives h3,
+.single-post .side-area .archives h3 {
+  font-size: 16px;
+}
+
+/* line 583, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .archives li,
+.single-newsletter .side-area .archives li,
+.single-post .side-area .archives li {
+  list-style-type: none;
+}
+
+/* line 586, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .archives li a,
+.single-newsletter .side-area .archives li a,
+.single-post .side-area .archives li a {
+  color: #FF6600;
+}
+
+/* line 589, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .archives li a:hover,
+.single-newsletter .side-area .archives li a:hover,
+.single-post .side-area .archives li a:hover {
+  color: #439d9d;
+}
+
+/* line 598, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.header-image {
+  position: relative;
+  min-height: 710px;
+  height: auto;
+  overflow: hidden;
+  background: #1a1919;
+}
+
+/* line 604, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.header-image .image {
+  position: relative;
+  width: 100%;
+}
+
+@media only screen and (min-width: 769px) {
+  /* line 604, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .header-image .image {
+    margin-top: -20%;
+  }
+}
+
+/* line 610, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.header-image .image img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 615, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.header-image .content {
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+/* line 622, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.header-image .content h1 {
+  color: #ffffff;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 622, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .header-image .content h1 {
+    font-size: 24px;
+  }
+}
+
+/* line 632, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.header-image .content p {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+/* line 637, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.header-image.tall {
+  min-height: 595px;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 637, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .header-image.tall {
+    min-height: 620px;
+  }
+}
+
+/* line 643, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.header-image.tall .content {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 15%, rgba(0, 0, 0, 0.95) 100%);
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 643, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .header-image.tall .content {
+    background: none;
+    bottom: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 650, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .header-image.tall h1 {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 655, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .header-image.tall p {
+    font-size: 16px;
+  }
+}
+
+/* line 660, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.header-image.tall img {
+  margin-top: -8%;
+}
+
+/* line 668, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-post #menu-item-67 a {
+  color: #439d9d;
+}
+
+/* line 676, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry #menu-item-871 a {
+  color: #439d9d;
+}
+
+/* line 685, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .post-area table,
+.single-newsletter .post-area table {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 100%;
+}
+
+/* line 691, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .post-area table tr td,
+.single-newsletter .post-area table tr td {
+  width: calc(100% - 200px) !important;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* line 696, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .post-area table tr td:first-child,
+.single-newsletter .post-area table tr td:first-child {
+  width: 200px !important;
+  white-space: nowrap;
+  padding-right: 15px;
+  font-weight: 700;
+}
+
+/* line 709, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .archives ul,
+.single-newsletter .side-area .archives ul {
+  padding: 0;
+}
+
+/* line 711, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .archives ul li,
+.single-newsletter .side-area .archives ul li {
+  margin-bottom: 5px;
+}
+
+/* line 713, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .archives ul li span,
+.single-newsletter .side-area .archives ul li span {
+  display: block;
+  font-size: 10px;
+}
+
+/* line 718, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .archives ul li a,
+.single-newsletter .side-area .archives ul li a {
+  color: #0b385b;
+}
+
+/* line 724, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .bonus-track,
+.single-newsletter .side-area .bonus-track {
+  background: #0b385b;
+  color: #ffffff;
+  padding: 10px 15px 20px 15px;
+}
+
+/* line 728, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .bonus-track a,
+.single-newsletter .side-area .bonus-track a {
+  color: #e19715;
+}
+
+/* line 730, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.single-blogentry .side-area .bonus-track a:hover,
+.single-newsletter .side-area .bonus-track a:hover {
+  color: #439d9d;
+}
+
+/* line 739, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.archive.tag h1 {
+  color: #0b385b;
+  padding: 25px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 739, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .archive.tag h1 {
+    padding: 0 15px;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+}
+
+/* line 748, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.archive.tag h1 span {
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 748, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .archive.tag h1 span {
+    display: block;
+  }
+}
+
+/* line 756, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.archive.tag .archive-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". . .";
+  grid-gap: 15px;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 756, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .archive.tag .archive-list {
+    grid-template-columns: 1fr;
+    grid-template-areas: ".";
+    padding: 15px;
+  }
+}
+
+/* line 769, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.archive.tag .archive-list .archive-item {
+  padding: 20px;
+  background: #ffffff;
+}
+
+/* line 773, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.archive.tag .archive-list .archive-item a {
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
+/* line 777, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.archive.tag .archive-list .archive-item a:hover {
+  color: #FF6600;
+}
+
+/* line 782, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.archive.tag .archive-list .archive-item h2 {
+  font-size: 14px;
+  color: #4a4a4a;
+  text-decoration: none;
+  line-height: 1;
+  margin: 0;
+}
+
+/* line 790, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.archive.tag .archive-list .archive-item p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 797, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .archive.tag .all-tags {
+    padding: 15px;
+  }
+}
+
+/* line 802, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.archive.tag .all-tags h2 {
+  font-weight: 300;
+}
+
+/* line 806, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.archive.tag .all-tags .tag-cloud {
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". . . .";
+  grid-gap: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 806, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .archive.tag .all-tags .tag-cloud {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". .";
+  }
+}
+
+/* line 819, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.archive.tag .all-tags .tag-cloud a {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+/* line 823, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.archive.tag .all-tags .tag-cloud a:hover {
+  background: #FF6600;
+}
+
+/* line 832, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.archive.post-type-archive-newsletter .archive, .archive.post-type-archive-blogentry .archive {
+  background: #ffffff;
+  padding: 30px 20px;
+  margin: 30px auto;
+}
+
+/* line 837, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.archive.post-type-archive-newsletter .archive h1, .archive.post-type-archive-blogentry .archive h1 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #439d9d;
+  text-transform: uppercase;
+}
+
+/* line 845, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.archive.post-type-archive-newsletter .archive h2 a, .archive.post-type-archive-blogentry .archive h2 a {
+  font-weight: 400;
+  color: #0b385b;
+}
+
+/* line 849, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.archive.post-type-archive-newsletter .archive h2 a:hover, .archive.post-type-archive-blogentry .archive h2 a:hover {
+  color: #FF6600;
+}
+
+/* line 857, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.tag-cloud {
+  padding: 0;
+  margin: 0;
+  padding-top: 9px;
+}
+
+/* line 862, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.tag-cloud li {
+  list-style-image: none;
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* line 869, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.tag-cloud a,
+.tag-cloud li > a {
+  background: #0b385b;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0.25em 0.5em 0.1em;
+  transition: all 250ms;
+}
+
+/* line 880, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.tag-cloud a:hover,
+.tag-cloud li > a:hover {
+  background: #439d9d;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 887, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-meetups .header-image, .page-template-template-meetups .header-image.tall {
+    min-height: 545px;
+  }
+}
+
+/* line 893, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-meetups .contained .intro-copy {
+  margin-bottom: 30px;
+  background: #ffffff;
+}
+
+/* line 897, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-meetups .contained .intro-copy p {
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* line 905, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-meetups .events {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". .";
+  grid-gap: 15px;
+}
+
+/* line 912, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-meetups .events .event {
+  padding: 20px;
+  background: #ffffff;
+}
+
+/* line 916, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-meetups .events .event img {
+  max-width: 100%;
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 923, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-meetups .row_grid {
+    margin: 0;
+  }
+}
+
+/* line 929, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-meetups .ime_archive {
+  margin-top: 50px;
+}
+
+/* line 931, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-meetups .ime_archive .img_placeholder {
+  display: none;
+}
+
+/* line 936, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-meetups .ime_archive .archive-event .ime_event {
+  height: 220px;
+}
+
+/* line 939, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-meetups .ime_archive .archive-event .ime_event .event_details {
+  height: auto;
+}
+
+/* line 942, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-meetups .ime_archive .archive-event .ime_event .event_details .event_date {
+  background: #439d9d;
+}
+
+/* line 947, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-meetups .ime_archive .archive-event .ime_event .event_details .event_desc a {
+  text-decoration: none !important;
+}
+
+/* line 950, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-meetups .ime_archive .archive-event .ime_event .event_details .event_desc a .event_title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #439d9d;
+  text-decoration: none !important;
+  text-overflow: inherit;
+  overflow: visible;
+  white-space: normal;
+}
+
+/* line 961, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-meetups .ime_archive .archive-event .ime_event .event_details .event_desc .event_address {
+  font-size: 14px;
+  text-overflow: inherit;
+  overflow: visible;
+  white-space: normal;
+  padding-left: 30px;
+  margin-top: 20px;
+}
+
+/* line 971, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-meetups .ime_archive .archive-event .ime_event .event_details .fa {
+  color: rgba(0, 0, 0, 0.1);
+  float: left;
+  font-size: 42px;
+  padding-bottom: 35px;
+  position: relative;
+  left: -20px;
+}
+
+/* line 987, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.meetup_events-template-default #menu-item-68 a {
+  color: #439d9d;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 992, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .meetup_events-template-default h1.contained {
+    font-size: 24px;
+  }
+}
+
+/* line 998, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.meetup_events-template-default .post-area {
+  padding: 20px;
+  margin: 10px 0 30px;
+  background: #ffffff;
+}
+
+/* line 1003, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.meetup_events-template-default .post-area .organizermain {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1003, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .meetup_events-template-default .post-area .organizermain {
+    overflow: hidden;
+  }
+}
+
+/* line 1012, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.meetup_events-template-default .post-area > h1 {
+  color: #439d9d;
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1012, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .meetup_events-template-default .post-area > h1 {
+    padding-left: 0;
+  }
+}
+
+/* line 1022, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.meetup_events-template-default .post-area h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+/* line 1027, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.meetup_events-template-default .post-area h4 a {
+  color: #FF6600;
+}
+
+/* line 1030, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.meetup_events-template-default .post-area h4 a:hover {
+  color: #0b385b;
+}
+
+/* line 1037, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.meetup_events-template-default .side-area {
+  display: none;
+}
+
+/* line 1042, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.meetup_events-template-default h1 + p > img {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1049, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-artists .header-image.tall, .page-template-template-artists .header-image {
+    min-height: 475px;
+  }
+}
+
+/* line 1061, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-artists .grid-container-artists {
+  background: #ffffff;
+  padding: 20px;
+  margin: 30px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1061, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-artists .grid-container-artists {
+    padding: 0;
+  }
+}
+
+/* line 1071, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-artists .grid-container-artists .episode {
+  width: 32%;
+  background: #e4e3df;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1071, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-artists .grid-container-artists .episode {
+    padding: 10px;
+    width: 47%;
+  }
+}
+
+/* line 1080, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-artists .grid-container-artists .episode h3 {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1080, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-artists .grid-container-artists .episode h3 {
+    font-size: 14px;
+  }
+}
+
+/* line 1086, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-artists .grid-container-artists .episode p {
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1086, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-artists .grid-container-artists .episode p {
+    font-size: 12px;
+  }
+}
+
+/* line 1099, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.subpage h1.contained {
+  padding: 30px 0;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1099, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .subpage h1.contained {
+    padding-left: 15px;
+  }
+}
+
+/* line 1106, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.subpage .content-area {
+  background: #ffffff;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+/* line 1116, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-blogentries .grid-container-newsletters,
+.page-template-template-newsletters .grid-container-newsletters,
+.page-template-template-insights .grid-container-newsletters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". . .";
+  max-width: 960px;
+  grid-gap: 15px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1116, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-blogentries .grid-container-newsletters,
+  .page-template-template-newsletters .grid-container-newsletters,
+  .page-template-template-insights .grid-container-newsletters {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". .";
+  }
+}
+
+/* line 1134, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-blogentries .grid-container-newsletters .blogentry a,
+.page-template-template-blogentries .grid-container-newsletters .newsletter a,
+.page-template-template-blogentries .grid-container-newsletters .item a,
+.page-template-template-newsletters .grid-container-newsletters .blogentry a,
+.page-template-template-newsletters .grid-container-newsletters .newsletter a,
+.page-template-template-newsletters .grid-container-newsletters .item a,
+.page-template-template-insights .grid-container-newsletters .blogentry a,
+.page-template-template-insights .grid-container-newsletters .newsletter a,
+.page-template-template-insights .grid-container-newsletters .item a {
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
+/* line 1138, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-blogentries .grid-container-newsletters .blogentry a h4,
+.page-template-template-blogentries .grid-container-newsletters .newsletter a h4,
+.page-template-template-blogentries .grid-container-newsletters .item a h4,
+.page-template-template-newsletters .grid-container-newsletters .blogentry a h4,
+.page-template-template-newsletters .grid-container-newsletters .newsletter a h4,
+.page-template-template-newsletters .grid-container-newsletters .item a h4,
+.page-template-template-insights .grid-container-newsletters .blogentry a h4,
+.page-template-template-insights .grid-container-newsletters .newsletter a h4,
+.page-template-template-insights .grid-container-newsletters .item a h4 {
+  font-size: 10px;
+  margin: 0;
+}
+
+/* line 1143, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-blogentries .grid-container-newsletters .blogentry a h3,
+.page-template-template-blogentries .grid-container-newsletters .newsletter a h3,
+.page-template-template-blogentries .grid-container-newsletters .item a h3,
+.page-template-template-newsletters .grid-container-newsletters .blogentry a h3,
+.page-template-template-newsletters .grid-container-newsletters .newsletter a h3,
+.page-template-template-newsletters .grid-container-newsletters .item a h3,
+.page-template-template-insights .grid-container-newsletters .blogentry a h3,
+.page-template-template-insights .grid-container-newsletters .newsletter a h3,
+.page-template-template-insights .grid-container-newsletters .item a h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* line 1148, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-blogentries .grid-container-newsletters .blogentry a p,
+.page-template-template-blogentries .grid-container-newsletters .newsletter a p,
+.page-template-template-blogentries .grid-container-newsletters .item a p,
+.page-template-template-newsletters .grid-container-newsletters .blogentry a p,
+.page-template-template-newsletters .grid-container-newsletters .newsletter a p,
+.page-template-template-newsletters .grid-container-newsletters .item a p,
+.page-template-template-insights .grid-container-newsletters .blogentry a p,
+.page-template-template-insights .grid-container-newsletters .newsletter a p,
+.page-template-template-insights .grid-container-newsletters .item a p {
+  font-size: 16px;
+  line-height: 1.2em;
+}
+
+/* line 1158, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-glossary .page-nav {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 40px;
+}
+
+/* line 1164, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-glossary .page-nav li {
+  margin-right: 20px;
+}
+
+/* line 1166, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-glossary .page-nav li a {
+  font-size: 28px;
+  color: #FF6600;
+}
+
+/* line 1173, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-glossary h2 a {
+  padding-left: 20px;
+  font-size: 16px;
+  color: #439d9d;
+}
+
+/* line 1180, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-glossary table {
+  border-collapse: collapse;
+  margin-bottom: 50px;
+}
+
+/* line 1186, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-glossary table td {
+  vertical-align: top;
+  padding-bottom: 20px;
+  padding-top: 15px;
+  line-height: 1.7em;
+  border-bottom: solid 1px #439d9d;
+}
+
+/* line 1192, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-glossary table td a {
+  color: #0b385b;
+  font-weight: 700;
+}
+
+/* line 1197, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-glossary table td:first-child {
+  font-weight: 700;
+  vertical-align: top;
+  padding-bottom: 20px;
+  padding-top: 15px;
+  line-height: 1.7em;
+  width: 35%;
+  border-bottom: solid 1px #439d9d;
+}
+
+/* line 1210, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights footer {
+  margin-top: 0;
+}
+
+/* line 1213, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights h1 {
+  margin-top: 1em;
+}
+
+/* line 1216, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights .content-area {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+/* line 1220, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section {
+  padding: 20px 50px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1220, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-insights section {
+    padding: 20px 0;
+  }
+}
+
+/* line 1225, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section h2 {
+  font-size: 28px;
+}
+
+/* line 1230, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section h2 {
+  margin-bottom: 40px;
+}
+
+/* line 1234, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-bonus .owl-nav {
+  position: absolute;
+  top: 18%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1234, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-insights section .insight-carousel-bonus .owl-nav {
+    display: none;
+  }
+}
+
+/* line 1242, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-bonus .owl-nav button {
+  font-size: 300px;
+  color: #000000;
+  position: absolute;
+  transition: all 500ms;
+}
+
+/* line 1249, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-bonus .owl-nav button div.nav-btn {
+  width: 75px;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+
+/* line 1255, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-bonus .owl-nav button.owl-prev {
+  left: -80px;
+}
+
+/* line 1257, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-bonus .owl-nav button.owl-prev .nav-btn {
+  background-image: url("../img/icons/angle-left-solid-reverse.svg");
+}
+
+/* line 1262, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-bonus .owl-nav button.owl-next {
+  right: -80px;
+}
+
+/* line 1265, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-bonus .owl-nav button.owl-next .nav-btn {
+  background-image: url("../img/icons/angle-right-solid-reverse.svg");
+}
+
+/* line 1270, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-bonus .owl-nav button:hover {
+  opacity: 1;
+}
+
+/* line 1274, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-bonus .owl-nav button:active, .page-template-template-insights section .insight-carousel-bonus .owl-nav button:focus {
+  outline: none;
+}
+
+/* line 1280, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-bonus a {
+  text-decoration: none;
+}
+
+/* line 1282, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-bonus a h3 {
+  color: #439d9d;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* line 1287, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-bonus a p {
+  color: #ffffff;
+}
+
+/* line 1291, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-bonus span {
+  font-size: 12px;
+  color: #ffffff;
+  display: block;
+}
+
+/* line 1295, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-bonus span a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* line 1301, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-bonus .item img {
+  border-radius: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 1309, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-blogs .owl-nav, .page-template-template-insights section .insight-carousel-newsletters .owl-nav {
+  position: absolute;
+  top: 18%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1309, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-insights section .insight-carousel-blogs .owl-nav, .page-template-template-insights section .insight-carousel-newsletters .owl-nav {
+    display: none;
+  }
+}
+
+/* line 1317, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-blogs .owl-nav button, .page-template-template-insights section .insight-carousel-newsletters .owl-nav button {
+  font-size: 300px;
+  color: #000000;
+  position: absolute;
+  transition: all 500ms;
+}
+
+/* line 1323, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-blogs .owl-nav button div.nav-btn, .page-template-template-insights section .insight-carousel-newsletters .owl-nav button div.nav-btn {
+  width: 75px;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+
+/* line 1329, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-blogs .owl-nav button.owl-prev, .page-template-template-insights section .insight-carousel-newsletters .owl-nav button.owl-prev {
+  left: -80px;
+}
+
+/* line 1331, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-blogs .owl-nav button.owl-prev .nav-btn, .page-template-template-insights section .insight-carousel-newsletters .owl-nav button.owl-prev .nav-btn {
+  background-image: url("../img/icons/angle-left-solid.svg");
+}
+
+/* line 1336, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-blogs .owl-nav button.owl-next, .page-template-template-insights section .insight-carousel-newsletters .owl-nav button.owl-next {
+  right: -80px;
+}
+
+/* line 1339, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-blogs .owl-nav button.owl-next .nav-btn, .page-template-template-insights section .insight-carousel-newsletters .owl-nav button.owl-next .nav-btn {
+  background-image: url("../img/icons/angle-right-solid.svg");
+}
+
+/* line 1344, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-blogs .owl-nav button:hover, .page-template-template-insights section .insight-carousel-newsletters .owl-nav button:hover {
+  opacity: 1;
+}
+
+/* line 1348, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-blogs .owl-nav button:active, .page-template-template-insights section .insight-carousel-blogs .owl-nav button:focus, .page-template-template-insights section .insight-carousel-newsletters .owl-nav button:active, .page-template-template-insights section .insight-carousel-newsletters .owl-nav button:focus {
+  outline: none;
+}
+
+/* line 1354, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-blogs a, .page-template-template-insights section .insight-carousel-newsletters a {
+  text-decoration: none;
+}
+
+/* line 1356, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-blogs a h3, .page-template-template-insights section .insight-carousel-newsletters a h3 {
+  color: #439d9d;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* line 1361, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-blogs a p, .page-template-template-insights section .insight-carousel-newsletters a p {
+  color: #4a4a4a;
+}
+
+/* line 1365, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-blogs span, .page-template-template-insights section .insight-carousel-newsletters span {
+  font-size: 12px;
+  color: #ffffff;
+  display: block;
+}
+
+/* line 1369, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-blogs span a, .page-template-template-insights section .insight-carousel-newsletters span a {
+  color: #4a4a4a;
+  text-decoration: underline;
+}
+
+/* line 1375, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .insight-carousel-blogs .item img, .page-template-template-insights section .insight-carousel-newsletters .item img {
+  border-radius: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 1382, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .archive {
+  border-top: solid 1px #4a4a4a;
+  padding: 40px 0;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* line 1388, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .archive a {
+  color: #439d9d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* line 1392, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section .archive a:hover {
+  color: #FF6600;
+}
+
+/* line 1397, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.recent-blogs {
+  padding-top: 50px;
+}
+
+/* line 1400, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.bonus-tracks {
+  background: #0b385b;
+}
+
+/* line 1402, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.bonus-tracks h2 {
+  color: #ffffff;
+}
+
+/* line 1405, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.bonus-tracks .archive {
+  border-color: #ffffff;
+}
+
+/* line 1407, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.bonus-tracks .archive a {
+  color: #ffffff;
+}
+
+/* line 1409, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.bonus-tracks .archive a:hover {
+  color: #FF6600;
+}
+
+/* line 1418, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.newsletter-subscribe {
+  background: #0b385b;
+  padding-bottom: 30px;
+}
+
+/* line 1421, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.newsletter-subscribe .newsletter-widget {
+  width: 100%;
+}
+
+/* line 1423, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.newsletter-subscribe .newsletter-widget label {
+  color: #e19715;
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* line 1429, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.newsletter-subscribe .newsletter-widget .mc4wp-form.mc4wp-form-421 {
+  margin-bottom: 0;
+}
+
+/* line 1431, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.newsletter-subscribe .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+/* line 1437, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.newsletter-subscribe .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields p {
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+/* line 1441, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.newsletter-subscribe .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields p label {
+  display: block;
+  font-size: 10px;
+}
+
+/* line 1444, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.newsletter-subscribe .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields p label.sr-only {
+  display: none;
+}
+
+/* line 1448, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.newsletter-subscribe .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields p input {
+  display: block;
+  font-size: 18px;
+  width: 100%;
+  padding: 5px;
+}
+
+/* line 1454, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.newsletter-subscribe .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields p input[type="email"] {
+  position: relative;
+  width: 300px;
+  border: solid 1px white;
+}
+
+/* line 1460, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.newsletter-subscribe .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields p.submit {
+  margin: 0;
+}
+
+/* line 1463, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.newsletter-subscribe .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields input[type="submit"] {
+  background: #FF6600;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'Red Hat Display';
+  border: none;
+  font-size: 18px;
+  width: 100%;
+  text-transform: uppercase;
+  border-radius: 0;
+  height: 33px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1463, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-insights section.newsletter-subscribe .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields input[type="submit"] {
+    border-radius: 4px;
+    margin-top: 15px;
+    height: auto;
+    padding: 0.25em 1em;
+  }
+}
+
+/* line 1482, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.newsletter-subscribe .newsletter-widget .mc4wp-form.mc4wp-form-421 .mc4wp-form-fields input[type="submit"]:hover {
+  cursor: pointer;
+  color: #1a1919;
+  background: #e19715;
+}
+
+/* line 1492, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.glossary-intro {
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+/* line 1495, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.glossary-intro a.btn {
+  text-align: center;
+  background: #0b385b;
+  color: #ffffff;
+  padding: 1em 1em;
+  text-decoration: none;
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  transition: all 500ms;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* line 1507, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-insights section.glossary-intro a.btn:hover {
+  background: #FF6600;
+}
+
+/* line 1516, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-bonustracks .grid-container-bonustracks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". . .";
+  max-width: 960px;
+  grid-gap: 15px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1516, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-bonustracks .grid-container-bonustracks {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". .";
+  }
+}
+
+/* line 1532, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-bonustracks .grid-container-bonustracks .item > a {
+  text-decoration: none;
+  color: #4a4a4a;
+  display: block;
+}
+
+/* line 1536, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-bonustracks .grid-container-bonustracks .item > a h4 {
+  font-size: 10px;
+  margin: 0;
+}
+
+/* line 1541, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-bonustracks .grid-container-bonustracks .item > a h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* line 1546, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-bonustracks .grid-container-bonustracks .item > a img {
+  width: 200px;
+  height: auto;
+  border-radius: 100%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+/* line 1554, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-bonustracks .grid-container-bonustracks .item p, .page-template-template-bonustracks .grid-container-bonustracks .item span {
+  font-size: 16px;
+  line-height: 1.2em;
+}
+
+/* line 1557, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-bonustracks .grid-container-bonustracks .item p a, .page-template-template-bonustracks .grid-container-bonustracks .item span a {
+  color: #4a4a4a;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1566, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-about .header-image {
+    min-height: 860px;
+  }
+}
+
+/* line 1570, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .header-image .content {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 15%, rgba(0, 0, 0, 0.95) 100%);
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1570, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-about .header-image .content {
+    background: none;
+    bottom: auto;
+  }
+}
+
+/* line 1578, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .header-image h1 {
+  line-height: 1.25em;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1578, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-about .header-image h1 {
+    font-size: 17px;
+  }
+}
+
+/* line 1586, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .header-image img {
+  margin-top: -20%;
+}
+
+/* line 1590, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .intro {
+  margin: 50px 0;
+}
+
+/* line 1592, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .intro h2 {
+  color: #439d9d;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* line 1597, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .intro p {
+  font-size: 20px;
+  line-height: 1.5em;
+  font-weight: 700;
+  color: #0b385b;
+}
+
+/* line 1604, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .intro .more-info p {
+  font-size: 20px;
+  line-height: 1.5em;
+  font-weight: normal;
+  color: #4a4a4a;
+}
+
+/* line 1610, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .intro .more-info blockquote {
+  margin: 0;
+}
+
+/* line 1613, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .intro .more-info em {
+  font-size: 16px;
+  line-height: 1.25em;
+}
+
+/* line 1620, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios h2 {
+  background: #0b385b;
+  color: #ffffff;
+  margin: 0;
+  padding: 20px;
+  padding-left: 40px;
+}
+
+/* line 1627, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios .person {
+  display: flex;
+  flex-flow: row wrap;
+  background: #439d9d;
+}
+
+/* line 1631, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios .person .image {
+  width: 50%;
+  position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1631, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-about .bios .person .image {
+    width: 100%;
+  }
+}
+
+/* line 1637, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios .person .image .socials {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  top: 15px;
+  z-index: 9;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+/* line 1646, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios .person .image .socials a {
+  width: 70px;
+  display: block;
+  background: #ffffff;
+  border-radius: 100%;
+  padding: 10px;
+  margin: 0 10px;
+  transition: all 500ms;
+}
+
+/* line 1654, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios .person .image .socials a img {
+  width: 100%;
+}
+
+/* line 1657, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios .person .image .socials a:hover {
+  background: #FF6600;
+}
+
+/* line 1662, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios .person .image img {
+  position: relative;
+  z-index: 8;
+  max-width: 100%;
+}
+
+/* line 1668, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios .person .content {
+  width: 50%;
+  padding: 10px 30px;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1668, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-about .bios .person .content {
+    width: 100%;
+  }
+}
+
+/* line 1675, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios .person .content h3 {
+  color: #0b385b;
+  text-transform: uppercase;
+  font-size: 28px;
+}
+
+/* line 1680, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios .person .content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* line 1683, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios .person .content ul li {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+}
+
+/* line 1687, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios .person .content ul li img {
+  width: 40px;
+}
+
+/* line 1690, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios .person .content ul li p {
+  padding-left: 15px;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
+/* line 1698, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios .person .blurb {
+  width: 100%;
+  background: #ffffff;
+}
+
+/* line 1701, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios .person .blurb p {
+  font-size: 18px;
+  line-height: 1.5em;
+  font-weight: 700;
+  color: #0b385b;
+}
+
+/* line 1709, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .bios .person .blurb div.extra-content p {
+  font-weight: normal;
+  color: #4a4a4a;
+}
+
+/* line 1717, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .sponsors {
+  border-top: solid 1px #0b385b;
+  margin-bottom: 50px;
+}
+
+/* line 1720, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .sponsors h2 {
+  text-align: center;
+  margin: 2em 0;
+}
+
+/* line 1724, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .sponsors .inner {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1724, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-about .sponsors .inner {
+    display: block;
+  }
+}
+
+/* line 1731, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .sponsors .inner .sponsor {
+  width: 45%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1731, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-about .sponsors .inner .sponsor {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* line 1737, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .sponsors .inner .sponsor a {
+  text-decoration: none;
+}
+
+/* line 1739, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .sponsors .inner .sponsor a img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 1745, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .sponsors .inner .sponsor a p {
+  color: #4a4a4a;
+  text-decoration: none;
+}
+
+/* line 1753, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .partners {
+  border-top: solid 1px #0b385b;
+  margin-bottom: 50px;
+}
+
+/* line 1756, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .partners h2 {
+  text-align: center;
+  margin: 2em 0;
+}
+
+/* line 1760, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .partners .inner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+/* line 1764, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .partners .inner .partner {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1764, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-about .partners .inner .partner {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* line 1774, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .partners .inner .partner a {
+  text-decoration: none;
+}
+
+/* line 1776, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about .partners .inner .partner a img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 1786, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about a.readmore, .page-template-template-about a.readmore-top {
+  text-align: center;
+  display: block;
+  margin-bottom: 40px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+/* line 1794, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about a.readmore:after, .page-template-template-about a.readmore-top:after {
+  content: '';
+  display: block;
+  border: dashed 1px rgba(0, 0, 0, 0.25);
+  margin-top: -10px;
+}
+
+/* line 1800, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about a.readmore span, .page-template-template-about a.readmore-top span {
+  background: #ffffff;
+  border: solid 1px rgba(0, 0, 0, 0.25);
+  padding: 0.25em 0.5em;
+}
+
+/* line 1806, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-about div.extra-content {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1812, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-subscribe .header-image.tall, .page-template-template-subscribe .header-image {
+    min-height: 420px;
+  }
+}
+
+/* line 1823, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-subscribe .content-area {
+  margin-bottom: 0;
+}
+
+/* line 1826, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-subscribe .extra-content {
+  padding: 100px 0;
+  color: #ffffff;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1826, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-subscribe .extra-content {
+    padding: 50px 0;
+  }
+}
+
+/* line 1833, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-subscribe .extra-content h2 {
+  font-size: 2em;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1833, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-subscribe .extra-content h2 {
+    line-height: 1.2em;
+  }
+}
+
+/* line 1840, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-subscribe .extra-content p {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.2em;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1840, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-subscribe .extra-content p {
+    font-size: 1.5em;
+  }
+}
+
+/* line 1849, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-subscribe .patreon-button {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* line 1852, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-subscribe .patreon-button a {
+  display: inline-block;
+  color: #e19715;
+  border: solid 2px #1a1919;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  width: auto;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/* line 1861, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-subscribe .patreon-button a:hover {
+  background: #e19715;
+  color: #ffffff;
+}
+
+/* line 1867, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-subscribe .services {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/* line 1873, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-subscribe .services .item {
+  width: 33%;
+  height: 300px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 1874, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-subscribe .services .item a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1873, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .page-template-template-subscribe .services .item {
+    height: 150px;
+    width: 50%;
+  }
+}
+
+/* line 1886, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-subscribe .services .item .inner {
+  padding: 15px;
+  overflow: hidden;
+}
+
+/* line 1889, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-subscribe .services .item .inner .image {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* line 1894, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-subscribe .services .item .inner .image img {
+  max-width: 100%;
+  margin: 0 auto;
+  height: auto;
+}
+
+/* line 1900, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-subscribe .services .item .inner .content {
+  text-align: center;
+}
+
+/* line 1902, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.page-template-template-subscribe .services .item .inner .content h4 {
+  text-decoration: none;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1914, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .search-results h1 {
+    padding: 15px 0 0 0 !important;
+    line-height: 1.5em;
+    font-size: 18px;
+  }
+  /* line 1919, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .search-results h1 em {
+    display: block;
+  }
+}
+
+/* line 1925, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.search-results .searchform label {
+  display: none;
+}
+
+/* line 1928, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.search-results .searchform input {
+  padding: 10px 20px;
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1928, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .search-results .searchform input {
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  /* line 1936, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+  .search-results .searchform input[type="search"] {
+    width: 600px;
+  }
+}
+
+/* line 1941, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_pages.scss */
+.search-results .searchform input[type="submit"] {
+  background: #0b385b;
+  color: #ffffff;
+  border: solid 2px #0b385b;
+  position: relative;
+  left: -5px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/*# sourceMappingURL=behavioralgrooves2.css.map */

@@ -1,0 +1,84 @@
+@mixin breakpoint($point) {
+  @if $point == phoneSm {
+    @media only screen and (max-width: 320px) { @content; }
+  }
+  @if $point == phoneMd {
+    @media only screen and (min-width: 321px) and (max-width: 414px) { @content; }
+  }
+  @if $point == phoneLg {
+    @media only screen and (min-width: 415px) and (max-width: 767px) { @content; }
+  }
+  @if $point == phoneLandscape {
+    @media only screen and (min-width : 320px) and (max-width : 767px) and (orientation : landscape) { @content; }
+  }
+  @if $point == mobile {
+    @media only screen and (max-width: 768px) { @content; }
+  }
+  @if $point == tabletL {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { @content; }
+  }
+  @if $point == tabletP {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { @content; }
+  }
+  @if $point == desktop {
+    @media only screen and (min-width: 769px) { @content; }
+  }
+  @if $point == sm {
+    @media only screen and (min-width: 769px) and (max-width: 992px) { @content; }
+  }
+  @if $point == md {
+    @media only screen and (min-width: 993px) and (max-width: 1199px) { @content; }
+  }
+  @if $point == lg {
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+  @if $point == 1080p {
+    @media only screen and (min-width: 1920px) { @content; }
+  }
+  @if $point == retina {
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @content; }
+  }
+}
+
+$brandgreen:        #439d9d;
+$brandblue:         #0b385b;
+$brandorange:       #FF6600;
+$brandorange2:      #e19715;
+$brandblack:        #1a1919;
+$textcolor:         #4a4a4a;
+$textcolor-dark:    #0F2522;
+$textcolor-lite:    #6f6f6f;
+$textcolor-liter:   #9b9b9b;
+$footertext:        #6f6f6f;
+$white:             #ffffff;
+$black:             #000000;
+$grey:              #494949;
+$tan1:              #b4b2a9;
+$tan2:              #dad9c5;
+$black10:           rgba(0,0,0,0.10);
+$black15:           rgba(0,0,0,0.15);
+$black25:           rgba(0,0,0,0.25);
+$black50:           rgba(0,0,0,0.50);
+$black75:           rgba(0,0,0,0.75);
+$black90:           rgba(0,0,0,0.90);
+$thin:              100;
+$light:             300;
+$regular:           400;
+$medium:            500;
+$bold:              700;
+
+$themeURL: '/wp-content/themes/behavioralgrooves2/';
+
+@mixin transition($time){
+    transition: all ($time);
+}
+
+@mixin gradient($top, $bottom){
+    background: $top;
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%);
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%);
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%);
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%);
+}
