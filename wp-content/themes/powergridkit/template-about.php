@@ -3,7 +3,7 @@
  * Template Name: About Template
  *
  * @package WordPress
- * @subpackage behavioralgrooves2
+ * @subpackage powergridkit
  * @since Twenty Sixteen 1.0
  * template-about
  */
@@ -47,7 +47,7 @@ get_header();
               <a href="https://twitter.com/motivationguru?lang=en" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/twitter.svg" alt="Follow Kurt on Twitter"></a>
               <a href="https://www.linkedin.com/in/kurtwnelson/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/linkedin-in.svg" alt="Find Kurt on LinkedIn"></a>
               <a href="mailto:Kurt@behaviroalgrooves.com"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/envelope.svg" alt="Email Kurt"></a>
-              <a href="https://bookme.name/behavioralgrooves" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/calendar.svg" alt="Book an appointment with Kurt"></a>
+              <a href="https://bookme.name/powergridkit" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/calendar.svg" alt="Book an appointment with Kurt"></a>
             </div>
             <img src="<?php echo get_template_directory_uri(); ?>/img/kurt-bio.jpg" alt="Kurt Nelson, PhD">
           </div>
@@ -89,7 +89,7 @@ get_header();
               <a href="https://twitter.com/thoulihan?lang=en" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/twitter.svg" alt="Follow Tim on Twitter"></a>
               <a href="https://www.linkedin.com/in/tim-houlihan-b-e/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/linkedin-in.svg" alt="Find Tim on LinkedIn"></a>
               <a href="mailto:Tim@behaviroalgrooves.com"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/envelope.svg" alt="Email Tim"></a>
-              <a href="https://bookme.name/behavioralgrooves" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/calendar.svg" alt="Book an appointment with Tim"></a>
+              <a href="https://bookme.name/powergridkit" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/calendar.svg" alt="Book an appointment with Tim"></a>
             </div>
             <img src="<?php echo get_template_directory_uri(); ?>/img/tim-bio.jpg" alt="Tim Houlihan">
           </div>

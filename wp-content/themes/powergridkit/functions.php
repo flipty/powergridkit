@@ -2,9 +2,9 @@
 
 //enqueue theme styles and scripts
 function enqueue_theme_assets() {
-    wp_enqueue_style( 'behavioralgrooves2', get_template_directory_uri() . '/css/behavioralgrooves2.css',false,'2.0','all');
-    //wp_register_script('behavioralgrooves2', get_template_directory_uri() . '/js/behavioralgrooves.js','','1.1', true);
-    //wp_enqueue_script( 'behavioralgrooves2', get_template_directory_uri() . '/js/behavioralgrooves.js',false,'1.0','all');
+    wp_enqueue_style( 'powergridkit', get_template_directory_uri() . '/css/powergridkit.css',false,'2.0','all');
+    //wp_register_script('powergridkit', get_template_directory_uri() . '/js/powergridkit.js','','1.1', true);
+    //wp_enqueue_script( 'powergridkit', get_template_directory_uri() . '/js/powergridkit.js',false,'1.0','all');
 }
 add_action( 'template_redirect', 'enqueue_theme_assets' );
 

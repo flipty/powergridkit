@@ -3,7 +3,7 @@
  * Template Name: Episodes Template
  *
  * @package WordPress
- * @subpackage behavioralgrooves2
+ * @subpackage powergridkit
  * @since Twenty Sixteen 1.0
  * template-episodes
  */

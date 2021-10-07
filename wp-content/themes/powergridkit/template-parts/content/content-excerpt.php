@@ -14,7 +14,7 @@
 
 		<?php
 		if ( is_sticky() && is_home() && ! is_paged() ) {
-			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'behavioralgrooves2' ) );
+			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'powergridkit' ) );
 		}
 		the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		?>

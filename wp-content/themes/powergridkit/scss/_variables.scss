@@ -40,25 +40,26 @@
   }
 }
 
-$brandgreen:        #439d9d;
-$brandblue:         #0b385b;
-$brandorange:       #FF6600;
-$brandorange2:      #e19715;
-$brandblack:        #1a1919;
+$blue:              #009aff;
+$bluelite:          #0088e2;
+$brandgreen:        #2bd832;
+$brandorange:       #fbba52;
+$purple:            #c458c4;
 $textcolor:         #4a4a4a;
 $textcolor-dark:    #0F2522;
 $textcolor-lite:    #6f6f6f;
 $textcolor-liter:   #9b9b9b;
 $footertext:        #6f6f6f;
 $white:             #ffffff;
-$black:             #000000;
 $grey:              #494949;
-$tan1:              #b4b2a9;
-$tan2:              #dad9c5;
+$tan:               #dad9c5;
+$black:             #000000;
 $black10:           rgba(0,0,0,0.10);
 $black15:           rgba(0,0,0,0.15);
 $black25:           rgba(0,0,0,0.25);
+$black33:           rgba(0,0,0,0.33);
 $black50:           rgba(0,0,0,0.50);
+$black66:           rgba(0,0,0,0.66);
 $black75:           rgba(0,0,0,0.75);
 $black90:           rgba(0,0,0,0.90);
 $thin:              100;
@@ -67,18 +68,4 @@ $regular:           400;
 $medium:            500;
 $bold:              700;
 
-$themeURL: '/wp-content/themes/behavioralgrooves2/';
-
-@mixin transition($time){
-    transition: all ($time);
-}
-
-@mixin gradient($top, $bottom){
-    background: $top;
-    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
-    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%);
-    background: -o-linear-gradient(top,  $top 0%,$bottom 100%);
-    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%);
-    background: linear-gradient(to bottom,  $top 0%,$bottom 100%);
-}
+$themeURL: '/wp-content/themes/powergridkit/';

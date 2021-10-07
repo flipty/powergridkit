@@ -3,7 +3,7 @@
  * Template Name: Insights Template
  *
  * @package WordPress
- * @subpackage behavioralgrooves
+ * @subpackage powergridkit
  * @since Twenty Sixteen 1.0
  * template-artists
  */

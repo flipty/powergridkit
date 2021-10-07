@@ -1,0 +1,20 @@
+{
+	"version": 3,
+	"file": "pgk.css",
+	"sources": [
+		"../scss/pgk.scss",
+		"../scss/_variables.scss",
+		"../scss/_global.scss",
+		"../scss/_home.scss",
+		"../scss/_pages.scss"
+	],
+	"sourcesContent": [
+		"@import \"variables\";\n@import \"global\";\n@import \"home\";\n@import \"pages\";\n",
+		"@mixin breakpoint($point) {\n  @if $point == phoneSm {\n    @media only screen and (max-width: 320px) { @content; }\n  }\n  @if $point == phoneMd {\n    @media only screen and (min-width: 321px) and (max-width: 414px) { @content; }\n  }\n  @if $point == phoneLg {\n    @media only screen and (min-width: 415px) and (max-width: 767px) { @content; }\n  }\n  @if $point == phoneLandscape {\n    @media only screen and (min-width : 320px) and (max-width : 767px) and (orientation : landscape) { @content; }\n  }\n  @if $point == mobile {\n    @media only screen and (max-width: 768px) { @content; }\n  }\n  @if $point == tabletL {\n    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { @content; }\n  }\n  @if $point == tabletP {\n    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { @content; }\n  }\n  @if $point == desktop {\n    @media only screen and (min-width: 769px) { @content; }\n  }\n  @if $point == sm {\n    @media only screen and (min-width: 769px) and (max-width: 992px) { @content; }\n  }\n  @if $point == md {\n    @media only screen and (min-width: 993px) and (max-width: 1199px) { @content; }\n  }\n  @if $point == lg {\n    @media only screen and (min-width: 1200px) { @content; }\n  }\n  @if $point == 1080p {\n    @media only screen and (min-width: 1920px) { @content; }\n  }\n  @if $point == retina {\n    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @content; }\n  }\n}\n\n$blue:              #009aff;\n$bluelite:          #0088e2;\n$brandgreen:        #2bd832;\n$brandorange:       #fbba52;\n$purple:            #c458c4;\n$textcolor:         #4a4a4a;\n$textcolor-dark:    #0F2522;\n$textcolor-lite:    #6f6f6f;\n$textcolor-liter:   #9b9b9b;\n$footertext:        #6f6f6f;\n$white:             #ffffff;\n$grey:              #494949;\n$tan:               #dad9c5;\n$black:             #000000;\n$black10:           rgba(0,0,0,0.10);\n$black15:           rgba(0,0,0,0.15);\n$black25:           rgba(0,0,0,0.25);\n$black33:           rgba(0,0,0,0.33);\n$black50:           rgba(0,0,0,0.50);\n$black66:           rgba(0,0,0,0.66);\n$black75:           rgba(0,0,0,0.75);\n$black90:           rgba(0,0,0,0.90);\n$thin:              100;\n$light:             300;\n$regular:           400;\n$medium:            500;\n$bold:              700;\n\n$themeURL: '/wp-content/themes/powergridkit/';\n",
+		"html {\n\n}\n\nbody {\n  background: #f2f2f2;\n}\n",
+		"",
+		""
+	],
+	"names": [],
+	"mappings": ";AEIA,AAAA,IAAI,CAAC;EACH,UAAU,EAAE,OAAO;CACpB"
+}

@@ -3,7 +3,7 @@
  * Template Name: Subscribe Page
  *
  * @package WordPress
- * @subpackage behavioralgrooves2
+ * @subpackage powergridkit
  * @since Twenty Sixteen 1.0
  * template-subscribe
  */
@@ -83,7 +83,7 @@ get_header();
   <div class="content-area contained">
     <?php the_content(); // Individual Post Styling ?>
     <div class="patreon-button">
-      <a href="https://www.patreon.com/behavioralgrooves" target="_blank">BECOME A PATREON HERE</a>
+      <a href="https://www.patreon.com/powergridkit" target="_blank">BECOME A PATREON HERE</a>
     </div>
   </div>
 
