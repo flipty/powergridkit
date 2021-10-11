@@ -1,6 +1,123 @@
-/* line 5, ../../../../../Users/tesch/Development/powergridkit.com/wp-content/themes/powergridkit/scss/_global.scss */
 body {
   background: #f2f2f2;
+  font-family: 'Overpass', sans-serif;
 }
 
-/*# sourceMappingURL=pgk.css.map */
+.container {
+  max-width: 1120px;
+  position: relative;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  margin-top: 15px;
+}
+
+header .main-header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-end;
+  border: solid 2px rgba(0, 0, 0, 0.05);
+  border-radius: 50px;
+}
+
+header .main-header .branding {
+  width: 190px;
+  padding-left: 15px;
+  margin-right: auto;
+}
+
+header .main-header .branding a img {
+  width: 100%;
+}
+
+header .main-header .nav ul {
+  display: flex;
+  flex-flow: row;
+  margin-right: 25px;
+}
+
+header .main-header .nav ul li {
+  list-style-type: none;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+header .main-header .nav ul li a {
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #6f6f6f;
+  border-bottom: solid 2px transparent;
+  transition: all 250ms;
+}
+
+header .main-header .nav ul li a:hover {
+  border-bottom: solid 2px #fbba52;
+}
+
+header .main-header .nav ul li.current-menu-item a {
+  border-bottom: solid 2px #009aff;
+}
+
+header .main-header .buy {
+  width: 200px;
+  padding-right: 10px;
+}
+
+header .main-header .buy a {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  background: #3eb3f7;
+  border: solid 2px #0088e2;
+  border-radius: 50px;
+  padding: 8px 20px 8px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 250ms;
+}
+
+header .main-header .buy a span {
+  font-size: 14px;
+  line-height: 17px;
+  position: relative;
+  top: 2px;
+  border-right: solid 2px #0088e2;
+  padding-right: 30px;
+  padding-left: 10px;
+}
+
+header .main-header .buy a img {
+  filter: invert(1);
+  width: 20px;
+  margin-left: auto;
+}
+
+header .main-header .buy a:hover {
+  background: #006cb3;
+}
+
+@media only screen and (min-width: 769px) {
+  header .hamburger {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  header .hamburger {
+    display: none;
+  }
+}
+
+header .hamburger span {
+  display: block;
+  background: #009aff;
+  height: 3px;
+  margin: 2px 0;
+}

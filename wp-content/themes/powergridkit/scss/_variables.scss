@@ -12,7 +12,7 @@
     @media only screen and (min-width : 320px) and (max-width : 767px) and (orientation : landscape) { @content; }
   }
   @if $point == mobile {
-    @media only screen and (max-width: 768px) { @content; }
+    @media only screen and (max-width: 999px) { @content; }
   }
   @if $point == tabletL {
     @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { @content; }
@@ -38,12 +38,16 @@
   @if $point == retina {
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @content; }
   }
+  @if $point == desktop {
+    @media only screen and (min-width: 1000px) { @content; }
+  }
 }
 
 $blue:              #009aff;
 $bluelite:          #0088e2;
-$brandgreen:        #2bd832;
-$brandorange:       #fbba52;
+$button:            #3eb3f7;
+$green:             #2bd832;
+$orange:            #fbba52;
 $purple:            #c458c4;
 $textcolor:         #4a4a4a;
 $textcolor-dark:    #0F2522;
@@ -54,6 +58,7 @@ $white:             #ffffff;
 $grey:              #494949;
 $tan:               #dad9c5;
 $black:             #000000;
+$black05:           rgba(0,0,0,0.05);
 $black10:           rgba(0,0,0,0.10);
 $black15:           rgba(0,0,0,0.15);
 $black25:           rgba(0,0,0,0.25);
@@ -62,6 +67,7 @@ $black50:           rgba(0,0,0,0.50);
 $black66:           rgba(0,0,0,0.66);
 $black75:           rgba(0,0,0,0.75);
 $black90:           rgba(0,0,0,0.90);
+$trace:             $black05;
 $thin:              100;
 $light:             300;
 $regular:           400;
