@@ -1,7 +1,31 @@
 </main>
 <footer>
   <div class="container">
-    STAY UP TO DATE, FOOL    
+    <div class="newsletter">
+      <div class="inner">
+        <div class="content">
+          <div class="icon">
+            <img src="/wp-content/themes/powergridkit/img/rss.svg" alt="RSS icon">
+          </div>
+          <div class="text">
+            <h3>Stay up to date</h3>
+            <p>Receive monthly product updates you can share with your students</p>
+          </div>
+          <div class="form">
+            MAILCHIMP FORM GOES HERE
+          </div>
+        </div>
+        <div class="image">
+          <img src="/wp-content/themes/powergridkit/img/power-lines.png" alt="illustrated power lines">
+        </div>
+      </div>
+    </div>
+    <div class="links">
+      <a href="mailto: support@powergridkit.com" class="email">support@powergridkit.com</a>
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+      <span>St. Paul, MN</span>
+    </div>
   </div>
 </footer>
 <?php wp_footer(); ?>

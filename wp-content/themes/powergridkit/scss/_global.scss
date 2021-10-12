@@ -17,6 +17,12 @@ img {
   max-width: 100%;
 }
 
+h1, h2, h3, h4 {
+  font-family: "Archivo";
+  color: $blue;
+  letter-spacing: -0.025em;
+}
+
 header {
   margin-top: 15px;
   .main-header {
@@ -110,6 +116,85 @@ header {
       background: $blue;
       height: 3px;
       margin: 2px 0;
+    }
+  }
+}
+
+footer {
+  margin-top: 100px;
+  .newsletter {
+    width: 768px;
+    margin: 0 auto;
+    border-radius: 50px;
+    border: solid 2px $trace;
+    @include breakpoint(mobile){
+      width: 100%;
+    }
+    .inner {
+      padding: 15px 60px;
+      display: flex;
+      flex-flow: row;
+      .content {
+        display: flex;
+        flex-flow: row wrap;
+        .icon {
+          width: 50px;
+          display: flex;
+          padding-bottom: 25px;
+          img {
+            width: 35px;
+            display: flex;
+            align-self: flex-end;
+            transform: rotate(-15deg);
+            @include svgBlue();
+          }
+        }
+        .text {
+          width: 80%;
+          h3 {
+            font-size: 30px;
+            margin: 0;
+            margin-bottom: 0.5em;
+          }
+          p {
+            margin: 0;
+            line-height: 1.2;
+            color: $textcolor;
+          }
+        }
+        .form {
+          width: 100%;
+          display: block;
+        }
+      }
+      .image {
+        width: 50%;
+        img {
+          max-width: 125%;
+          position: relative;
+          left: 20px;
+        }
+      }
+    }
+  }
+  .links {
+    margin-top: 50px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    font-size: 14px;
+    span {
+      padding-left: 1em;
+    }
+    a {
+      color: $textcolor;
+      margin: 0 1em;
+      &.email {
+        // text-decoration: none;
+      }
+      &:hover {
+        color: $blue;
+      }
     }
   }
 }

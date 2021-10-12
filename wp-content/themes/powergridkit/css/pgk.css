@@ -13,6 +13,12 @@ img {
   max-width: 100%;
 }
 
+h1, h2, h3, h4 {
+  font-family: "Archivo";
+  color: #009aff;
+  letter-spacing: -0.025em;
+}
+
 header {
   margin-top: 15px;
 }
@@ -120,4 +126,98 @@ header .hamburger span {
   background: #009aff;
   height: 3px;
   margin: 2px 0;
+}
+
+footer {
+  margin-top: 100px;
+}
+
+footer .newsletter {
+  width: 768px;
+  margin: 0 auto;
+  border-radius: 50px;
+  border: solid 2px rgba(0, 0, 0, 0.05);
+}
+
+@media only screen and (max-width: 999px) {
+  footer .newsletter {
+    width: 100%;
+  }
+}
+
+footer .newsletter .inner {
+  padding: 15px 60px;
+  display: flex;
+  flex-flow: row;
+}
+
+footer .newsletter .inner .content {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+footer .newsletter .inner .content .icon {
+  width: 50px;
+  display: flex;
+  padding-bottom: 25px;
+}
+
+footer .newsletter .inner .content .icon img {
+  width: 35px;
+  display: flex;
+  align-self: flex-end;
+  transform: rotate(-15deg);
+  filter: invert(0.5) sepia(1) saturate(3) hue-rotate(170deg) brightness(0.95);
+}
+
+footer .newsletter .inner .content .text {
+  width: 80%;
+}
+
+footer .newsletter .inner .content .text h3 {
+  font-size: 30px;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+footer .newsletter .inner .content .text p {
+  margin: 0;
+  line-height: 1.2;
+  color: #5c5c5c;
+}
+
+footer .newsletter .inner .content .form {
+  width: 100%;
+  display: block;
+}
+
+footer .newsletter .inner .image {
+  width: 50%;
+}
+
+footer .newsletter .inner .image img {
+  max-width: 125%;
+  position: relative;
+  left: 20px;
+}
+
+footer .links {
+  margin-top: 50px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  font-size: 14px;
+}
+
+footer .links span {
+  padding-left: 1em;
+}
+
+footer .links a {
+  color: #5c5c5c;
+  margin: 0 1em;
+}
+
+footer .links a:hover {
+  color: #009aff;
 }

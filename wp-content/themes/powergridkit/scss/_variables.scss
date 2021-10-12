@@ -49,7 +49,7 @@ $button:            #3eb3f7;
 $green:             #2bd832;
 $orange:            #fbba52;
 $purple:            #c458c4;
-$textcolor:         #4a4a4a;
+$textcolor:         rgba(92,92,92,1);
 $textcolor-dark:    #0F2522;
 $textcolor-lite:    #6f6f6f;
 $textcolor-liter:   #9b9b9b;
@@ -74,4 +74,7 @@ $regular:           400;
 $medium:            500;
 $bold:              700;
 
-$themeURL: '/wp-content/themes/powergridkit/';
+@mixin svgBlue() {
+  //this turns black SVGs into the brand blue
+  filter: invert(0.5) sepia(1) saturate(3) hue-rotate(170deg) brightness(0.95);
+}
