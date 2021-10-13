@@ -3,14 +3,22 @@ html {
 }
 
 body {
-  background: #f2f2f2;
+  background: $background;
   font-family: 'Overpass', sans-serif;
+  @include breakpoint(mobile){
+    margin: 0;
+  }
 }
 
 .container {
   max-width: 1120px;
   position: relative;
   margin: 0 auto;
+  @include breakpoint(mobile){
+    width: calc(100% - 30px);
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 img {
@@ -32,6 +40,12 @@ header {
     justify-content: flex-end;
     border: solid 2px $trace;
     border-radius: 50px;
+    @include breakpoint(mobile){
+      position: relative;
+      z-index: 10;
+      background: $background;
+      transition: all 500ms;
+    }
     .branding {
       width: 190px;
       padding-left: 15px;
@@ -39,21 +53,42 @@ header {
       a {
         img {
           width: 100%;
+          @include breakpoint(mobile){
+            margin: 10px 0;
+          }
         }
       }
     }
     .nav {
+      @include breakpoint(mobile){
+        position: absolute;
+        top: -500px;
+        left: 15px;
+        width: calc(100% - 50px);
+        border-radius: 25px;
+        z-index: 12;
+        transition: all 500ms;
+        border: solid 2px $trace;
+        border-top-color: $background-dark;
+        border-top-left-radius: 0;
+        background: $background;
+      }
       ul {
         display: flex;
         flex-flow: row;
         margin-right: 25px;
         @include breakpoint(mobile){
-
+          display: block;
+          padding: 0;
+          margin-right: 0;
         }
         li {
           list-style-type: none;
           padding-left: 1.5em;
           padding-right: 1.5em;
+          @include breakpoint(mobile){
+            padding: 0;
+          }
           a {
             font-size: 14px;
             font-weight: 400;
@@ -61,21 +96,77 @@ header {
             color: $textcolor-lite;
             border-bottom: solid 2px transparent;
             transition: all 250ms;
+            @include breakpoint(mobile){
+              display: block;
+              font-size: 18px;
+              font-weight: 700;
+              text-align: center;
+              padding: 0.75em 0;
+            }
             &:hover {
               border-bottom: solid 2px $orange;
             }
           }
           &.current-menu-item {
             a {
-              border-bottom: solid 2px $blue;
+              @include breakpoint(mobile){
+                border: none !important;
+              }
             }
           }
+          &.mobile-only {
+            @include breakpoint(desktop){
+              display: none;
+            }
+          }
+          &.nav-buy {
+            a {
+              background: $green;
+              color: $white;
+              margin: 0 15px;
+              border-radius: 30px;
+              border: solid 2px darken($green, 10%);
+            }
+          }
+          &.current-menu-item.nav-about a {
+            border-bottom: solid 2px $green;
+          }
+          &.current-menu-item.nav-partners a {
+            border-bottom: solid 2px $blue;
+          }
+          &.current-menu-item.nav-blog a {
+            border-bottom: solid 2px $purple;
+          }
+          &.current-menu-item.nav-kit a {
+            border-bottom: solid 2px $orange;
+          }
+          &.nav-about a:hover {
+            border-bottom: solid 2px $green;
+          }
+          &.nav-partners a:hover {
+            border-bottom: solid 2px $blue;
+          }
+          &.nav-blog a:hover {
+            border-bottom: solid 2px $purple;
+          }
+          &.nav-kit a:hover {
+            border-bottom: solid 2px $orange;
+          }
+        }
+      }
+      &.active {
+        top: 51px;
+        @include breakpoint(mobile){
+          background: $background-dark;
         }
       }
     }
     .buy {
       width: 200px;
       padding-right: 10px;
+      @include breakpoint(mobile){
+        display: none;
+      }
       a {
         display: flex;
         flex-flow: row;
@@ -106,16 +197,40 @@ header {
         }
       }
     }
+    &.active {
+      background-color: $background-dark;
+    }
   }
   .hamburger {
     @include breakpoint(desktop){
       display: none;
     }
+    border: none;
+    text-align: right;
+    padding: 10px;
+    margin-right: 10px;
+    transition: all 250ms;
+    background: transparent;
     span {
       display: block;
       background: $blue;
       height: 3px;
-      margin: 2px 0;
+      width: 20px;
+      margin: 0;
+      margin-bottom: 4px;
+      &.t {
+
+      }
+      &.m {
+        width: 15px;
+        margin-left: 5px;
+      }
+      &.b {
+        margin-bottom: 0;
+      }
+    }
+    &.active {
+      transform: rotate(-33deg);
     }
   }
 }
@@ -129,18 +244,22 @@ footer {
     border: solid 2px $trace;
     @include breakpoint(mobile){
       width: 100%;
+      border: none;
     }
     .inner {
-      padding: 15px 60px;
+      padding: 15px 60px 30px 60px;
       display: flex;
       flex-flow: row;
+      @include breakpoint(mobile){
+        padding: 0;
+      }
       .content {
         display: flex;
         flex-flow: row wrap;
         .icon {
           width: 50px;
           display: flex;
-          padding-bottom: 25px;
+          padding-bottom: 35px;
           img {
             width: 35px;
             display: flex;
@@ -153,8 +272,8 @@ footer {
           width: 80%;
           h3 {
             font-size: 30px;
-            margin: 0;
             margin-bottom: 0.5em;
+            margin-top: 0.5em;
           }
           p {
             margin: 0;
@@ -165,14 +284,68 @@ footer {
         .form {
           width: 100%;
           display: block;
+          margin-top: 20px;
+          form {
+            margin-bottom: 0;
+          }
+          .mc4wp-form-fields {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-around;
+            @include breakpoint(desktop){
+              width: 348px;
+              box-shadow: 0 0 15px rgba(0,0,0,0.15);
+              border-radius: 8px;
+            }
+            width: 100%;
+            label {
+              span {
+                display: none;
+              }
+            }
+            input[type="email"]{
+              width: 260px;
+              height: 50px;
+              border: solid 1px $white;
+              border-top-left-radius: 8px;
+              border-bottom-left-radius: 8px;
+              font-size: 16px;
+              padding-left: 15px;
+              @include breakpoint(mobile){
+                width: 240px;
+              }
+            }
+            input[type="submit"]{
+              background: $blue;
+              color: $white;
+              font-family: 'Overpass';
+              font-weight: 800;
+              font-size: 14px;
+              border: none;
+              border-top-right-radius: 8px;
+              border-bottom-right-radius: 8px;
+              line-height: 50px;
+              padding: 0 20px;
+              position: relative;
+              left: -15px;
+              transition: all 250ms;
+              &:hover {
+                background: $bluelite;
+              }
+            }
+          }
         }
       }
       .image {
-        width: 50%;
+        width: 100%;
+        @include breakpoint(mobile){
+          display: none;
+        }
         img {
           max-width: 125%;
           position: relative;
           left: 20px;
+          top: -30px;
         }
       }
     }
@@ -183,12 +356,25 @@ footer {
     flex-flow: row;
     justify-content: center;
     font-size: 14px;
+    @include breakpoint(mobile){
+      display: block;
+      text-align: center;
+      font-size: 18px;
+    }
     span {
+      margin: 1em;
       padding-left: 1em;
+      @include breakpoint(mobile){
+        display: block;
+        padding-left: 0;
+      }
     }
     a {
       color: $textcolor;
-      margin: 0 1em;
+      margin: 1em;
+      @include breakpoint(mobile){
+        display: block;
+      }
       &.email {
         // text-decoration: none;
       }
@@ -197,4 +383,13 @@ footer {
       }
     }
   }
+}
+
+.blurred {
+  backdrop-filter: blur(10px);
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
 }

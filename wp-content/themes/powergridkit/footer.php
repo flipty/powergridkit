@@ -1,4 +1,5 @@
 </main>
+
 <footer>
   <div class="container">
     <div class="newsletter">
@@ -12,7 +13,7 @@
             <p>Receive monthly product updates you can share with your students</p>
           </div>
           <div class="form">
-            MAILCHIMP FORM GOES HERE
+            <?php echo do_shortcode('[mc4wp_form id="30"]');?>
           </div>
         </div>
         <div class="image">
@@ -28,8 +29,10 @@
     </div>
   </div>
 </footer>
+
 <?php wp_footer(); ?>
-<script src="/wp-content/themes/powergridkit/js/jquery-3.6.0.min.js"></script>
+
 <script src="/wp-content/themes/powergridkit/js/pgk.js"></script>
+
 </body>
 </html>

@@ -58,6 +58,8 @@ $white:             #ffffff;
 $grey:              #494949;
 $tan:               #dad9c5;
 $black:             #000000;
+$background:        #f2f2f2;
+$background-dark:   #e2e2e2;
 $black05:           rgba(0,0,0,0.05);
 $black10:           rgba(0,0,0,0.10);
 $black15:           rgba(0,0,0,0.15);
@@ -75,6 +77,6 @@ $medium:            500;
 $bold:              700;
 
 @mixin svgBlue() {
-  //this turns black SVGs into the brand blue
-  filter: invert(0.5) sepia(1) saturate(3) hue-rotate(170deg) brightness(0.95);
+  //this turns black SVGs into a close approximation of the brand $blue (#009aff)
+  filter: invert(0.5) sepia(5) saturate(3) hue-rotate(170deg) brightness(1.0);
 }

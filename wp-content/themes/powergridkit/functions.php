@@ -49,3 +49,7 @@ function html5_search_form( $form ) {
 }
 
  add_filter( 'get_search_form', 'html5_search_form' );
+
+ register_nav_menus( array(
+     'primary' => 'Primary Menu',
+ ) );
