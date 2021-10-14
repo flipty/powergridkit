@@ -10,20 +10,15 @@
  */
 
 get_header();
-?>
-<div class="post">
-
-		<?php
 
 		/* Start the Loop */
 		while ( have_posts() ) : the_post();
 		?>
+		<div class="container">
+			<?php the_content();?>	
+		</div>
 
 		<?php
 		endwhile; // End the loop.
-		?>
 
-</div><!--/contained-->
-
-<?php
 get_footer();

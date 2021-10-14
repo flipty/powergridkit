@@ -1,11 +1,34 @@
 {
-    "key": "group_60b924367ba01",
-    "title": "Podcast Providers",
+    "key": "group_616757d13ccac",
+    "title": "Partners Content",
     "fields": [
         {
-            "key": "field_60b92446302a9",
-            "label": "Podcast Providers",
-            "name": "podcast_providers",
+            "key": "field_616757eb8f7b5",
+            "label": "Featured Blurb",
+            "name": "featured_blurb",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "partner",
+                "post"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_6167580d8f7b6",
+            "label": "Partners",
+            "name": "partners",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -22,9 +45,9 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_60b92458302aa",
-                    "label": "Service",
-                    "name": "service",
+                    "key": "field_6167581c8f7b7",
+                    "label": "Partner Name",
+                    "name": "partner_name",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -41,9 +64,33 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_60b924d6302ab",
-                    "label": "URL",
-                    "name": "url",
+                    "key": "field_616758308f7b8",
+                    "label": "Partner Logo",
+                    "name": "partner_logo",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_616758498f7b9",
+                    "label": "Partner URL",
+                    "name": "partner_url",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -55,30 +102,6 @@
                     },
                     "default_value": "",
                     "placeholder": ""
-                },
-                {
-                    "key": "field_60b924de302ac",
-                    "label": "Logo",
-                    "name": "logo",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "id",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
                 }
             ]
         }
@@ -86,9 +109,9 @@
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "page",
                 "operator": "==",
-                "value": "acf-options"
+                "value": "12"
             }
         ]
     ],
@@ -100,5 +123,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1622746348
+    "modified": 1634169127
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Subpage Template
+ * Template Name: Subpage Template (Narrow)
  *
  * @package WordPress
  * @subpackage powergridkit
@@ -11,7 +11,7 @@
 get_header();
 ?>
 
-  <div class="container">
+  <div class="container narrow">
 
       <?php if (have_posts()) : ?>
       	<?php while (have_posts()) : the_post(); ?>

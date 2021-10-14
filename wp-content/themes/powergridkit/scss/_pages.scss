@@ -1,0 +1,80 @@
+main {
+  color: $textcolor;
+  .container {
+    @include breakpoint(desktop){
+      max-width: 1010px;
+    }
+    &.narrow {
+      max-width: 672px;
+    }
+    img {
+      height: auto;
+    }
+  }
+  h1 {
+    font-size: 48px;
+    font-family: 'Archivo';
+    text-align: center;
+    font-weight: 400;
+    margin-top: 1em;
+  }
+}
+
+.page-template-template-partners {
+  .partners-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    .partners-content {
+      width: 65%;
+      @include breakpoint(mobile){
+        width: 100%;
+      }
+      &.no-feature {
+        width: 100%;
+      }
+    }
+    .featured-partner {
+      width: calc(30% - 30px);
+      padding: 15px;
+      border-radius: 20px;
+      border: solid 3px $trace;
+      @include breakpoint(mobile){
+        width: 100%;
+      }
+      img {
+        height: auto;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .partner-grid {
+    background: $white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px $black10;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 820px;
+    margin: 50px auto;
+    align-items: center;
+    @include breakpoint(mobile){
+      width: 100%;
+      padding: 0;
+      justify-content: center;
+    }
+    a {
+      width: 28%;
+      margin: 15px 0;
+      @include breakpoint(mobile){
+        width: 65%;
+      }
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+}

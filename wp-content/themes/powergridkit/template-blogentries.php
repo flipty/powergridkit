@@ -23,12 +23,12 @@ get_header();
     while ( have_posts() ) : the_post(); //this is to get the post object
     ?>
 
-    <div class="contained subpage">
+    <div class="container">
 
-        <h1 class="contained">BLOG ARCHIVE</h1>
+        <h1><?php echo get_the_title();?></h1>
 
         <div class="content-area">
-            <div class="grid-container-newsletters">
+            <div class="blog-posts">
             <?php
             if ( $query->have_posts() ) :
             while ( $query->have_posts() ) : $query->the_post();

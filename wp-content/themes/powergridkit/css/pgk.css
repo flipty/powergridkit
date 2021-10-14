@@ -170,7 +170,7 @@ header .main-header .nav ul li.current-menu-item.nav-partners a {
   border-bottom: solid 2px #009aff;
 }
 
-header .main-header .nav ul li.current-menu-item.nav-blog a {
+header .main-header .nav ul li.current-menu-item.nav-news a {
   border-bottom: solid 2px #c458c4;
 }
 
@@ -186,7 +186,7 @@ header .main-header .nav ul li.nav-partners a:hover {
   border-bottom: solid 2px #009aff;
 }
 
-header .main-header .nav ul li.nav-blog a:hover {
+header .main-header .nav ul li.nav-news a:hover {
   border-bottom: solid 2px #c458c4;
 }
 
@@ -500,4 +500,112 @@ footer .links a:hover {
   -moz-filter: blur(10px);
   -o-filter: blur(10px);
   -ms-filter: blur(10px);
+}
+
+main {
+  color: #5c5c5c;
+}
+
+@media only screen and (min-width: 769px) {
+  main .container {
+    max-width: 1010px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  main .container {
+    max-width: 1010px;
+  }
+}
+
+main .container.narrow {
+  max-width: 672px;
+}
+
+main .container img {
+  height: auto;
+}
+
+main h1 {
+  font-size: 48px;
+  font-family: 'Archivo';
+  text-align: center;
+  font-weight: 400;
+  margin-top: 1em;
+}
+
+.page-template-template-partners .partners-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.page-template-template-partners .partners-container .partners-content {
+  width: 65%;
+}
+
+@media only screen and (max-width: 999px) {
+  .page-template-template-partners .partners-container .partners-content {
+    width: 100%;
+  }
+}
+
+.page-template-template-partners .partners-container .partners-content.no-feature {
+  width: 100%;
+}
+
+.page-template-template-partners .partners-container .featured-partner {
+  width: calc(30% - 30px);
+  padding: 15px;
+  border-radius: 20px;
+  border: solid 3px rgba(0, 0, 0, 0.05);
+}
+
+@media only screen and (max-width: 999px) {
+  .page-template-template-partners .partners-container .featured-partner {
+    width: 100%;
+  }
+}
+
+.page-template-template-partners .partners-container .featured-partner img {
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.page-template-template-partners .partner-grid {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 820px;
+  margin: 50px auto;
+  align-items: center;
+}
+
+@media only screen and (max-width: 999px) {
+  .page-template-template-partners .partner-grid {
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+.page-template-template-partners .partner-grid a {
+  width: 28%;
+  margin: 15px 0;
+}
+
+@media only screen and (max-width: 999px) {
+  .page-template-template-partners .partner-grid a {
+    width: 65%;
+  }
+}
+
+.page-template-template-partners .partner-grid a img {
+  height: auto;
+  width: 100%;
 }
