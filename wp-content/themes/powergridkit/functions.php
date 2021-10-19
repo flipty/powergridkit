@@ -11,8 +11,9 @@ add_action( 'template_redirect', 'enqueue_theme_assets' );
 // Disable comments by default. Change this if you need to allow comments for your site.
 define("WP_ALLOW_COMMENTS", false);
 
+// how many words is in a standard excerpt?
 add_filter( 'excerpt_length', function($length) {
-    return 24;
+    return 100;
 } );
 
 // change the default "[...]" for excerpts

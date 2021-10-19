@@ -17,7 +17,8 @@ get_header();
 ?>
 
 <div class="container full-size">
-<?php the_content();?>
+  <h1><?php echo get_the_title();?></h1>
+  <?php the_content();?>
 </div>
 
 <?php

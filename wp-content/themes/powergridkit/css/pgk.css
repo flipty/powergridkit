@@ -142,12 +142,6 @@ header .main-header .nav ul li a:hover {
   }
 }
 
-@media only screen and (min-width: 769px) {
-  header .main-header .nav ul li.mobile-only {
-    display: none;
-  }
-}
-
 @media only screen and (min-width: 1000px) {
   header .main-header .nav ul li.mobile-only {
     display: none;
@@ -261,12 +255,6 @@ header .hamburger {
   background: transparent;
 }
 
-@media only screen and (min-width: 769px) {
-  header .hamburger {
-    display: none;
-  }
-}
-
 @media only screen and (min-width: 1000px) {
   header .hamburger {
     display: none;
@@ -375,14 +363,6 @@ footer .newsletter .inner .content .form .mc4wp-form-fields {
   flex-flow: row;
   justify-content: space-around;
   width: 100%;
-}
-
-@media only screen and (min-width: 769px) {
-  footer .newsletter .inner .content .form .mc4wp-form-fields {
-    width: 348px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -506,12 +486,6 @@ main {
   color: #5c5c5c;
 }
 
-@media only screen and (min-width: 769px) {
-  main .container {
-    max-width: 1010px;
-  }
-}
-
 @media only screen and (min-width: 1000px) {
   main .container {
     max-width: 1010px;
@@ -522,8 +496,21 @@ main .container.narrow {
   max-width: 672px;
 }
 
+@media only screen and (min-width: 1000px) {
+  main .container.full-size p {
+    width: 672px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 main .container img {
   height: auto;
+}
+
+main .container iframe {
+  margin-top: 40px;
+  border-radius: 20px;
 }
 
 main h1 {
