@@ -29,6 +29,9 @@
   @if $point == lg {
     @media only screen and (min-width: 1200px) { @content; }
   }
+  @if $point == xl {
+    @media only screen and (min-width: 1720px) { @content; }
+  }
   @if $point == 1080p {
     @media only screen and (min-width: 1920px) { @content; }
   }
@@ -42,10 +45,13 @@
 
 $blue:              #009aff;
 $bluelite:          #0088e2;
+$bluetrans:         rgba(0,136,226,0.8);
 $button:            #3eb3f7;
 $green:             #2bd832;
 $orange:            #fbba52;
 $purple:            #c458c4;
+$red:               #CC4433;
+$trace:             #e8e8e8;
 $textcolor:         rgba(92,92,92,1);
 $textcolor-dark:    #0F2522;
 $textcolor-lite:    #6f6f6f;
@@ -66,7 +72,6 @@ $black50:           rgba(0,0,0,0.50);
 $black66:           rgba(0,0,0,0.66);
 $black75:           rgba(0,0,0,0.75);
 $black90:           rgba(0,0,0,0.90);
-$trace:             $black05;
 $thin:              100;
 $light:             300;
 $regular:           400;

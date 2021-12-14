@@ -1,0 +1,319 @@
+.home {
+  .traces {
+    display: none;
+    @include breakpoint(desktop){
+      display: block;
+    }
+  }
+
+  section.intro {
+    .intro-content {
+      display: flex;
+      flex-flow: row wrap;
+      position: relative;
+      margin-top: 100px;
+      @include breakpoint(mobile){
+        margin-top: 20px;
+        position: static;
+      }
+      .content {
+        position: absolute;
+        z-index: 8;
+        top: 0;
+        left: 0;
+        width: 45%;
+        @include breakpoint(mobile){
+          position: static;
+          width: 100%;
+        }
+        h1 {
+          margin-top: 0;
+          margin-bottom: 15px;
+          text-align: left;
+          @include breakpoint(desktop){
+            width: 320px;
+            font-size: 64px;
+            line-height: 0.9em;
+          }
+          @include breakpoint(mobile){
+            font-size: 36px;
+            text-align: center;
+          }
+        }
+        p {
+          margin-top: 0;
+          line-height: 1.5em;
+          text-align: left;
+          @include breakpoint(desktop){
+            width: 265px;
+            font-size: 16px;
+            padding-left: 80px;
+          }
+        }
+        .buy {
+          position: relative;
+          left: 80px;
+          top: 10px;
+          width: 240px;
+          @include breakpoint(mobile){
+            width: 100%;
+            position: static;
+            left: auto;
+            top: auto;
+          }
+          a {
+            span {
+              line-height: 32px;
+              padding-right: 20px;
+              font-size: 22px;
+            }
+          }
+        }
+      }
+      .image {
+        width: 54%;
+        margin-left: auto;
+        margin-bottom: 50px;
+        @include breakpoint(mobile){
+          width: 100%;
+          position: static;
+        }
+        img {
+          margin-top: -50px;
+          @include breakpoint(mobile){
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    .traces {
+      position: absolute;
+      width: 500px;
+      height: 350px;
+      z-index: 7;
+      top: 200px;
+      left: 0px;
+      > div {
+        border: solid 4px;
+        border-radius: 50px;
+        position: absolute;
+        border-color: $trace;
+      }
+      .dot {
+        width: 15px;
+        height: 15px;
+        border-style: solid;
+        border-radius: 50%;
+        background: $white;
+        border-color: #BBB;
+        z-index: 9;
+        left: -2px;
+        top: 15px;
+      }
+      .trace1 {
+        top: 34px;
+        left: 8px;
+        width: 340px;
+        height: 100px;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top: none;
+        border-right: none;
+      }
+      .trace2 {
+        top: 134px;
+        left: 350px;
+        width: 40px;
+        height: 84px;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: none;
+        border-left: none;
+      }
+      .trace3 {
+        top: 219px;
+        left: 42px;
+        width: 435px;
+        height: 65px;
+        border-bottom: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+  .embed-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+      max-width: 100%;
+      height: auto;
+  }
+
+  .embed-container iframe,
+  .embed-container object,
+  .embed-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+
+  section.video-news {
+    display: flex;
+    flex-flow: row;
+    align-content: center;
+    .container {
+      width: 100%;
+    }
+    .traces {
+      height: 568px;
+      width: 42%;
+      width: 20%;
+      @include breakpoint(xl){
+        width: calc(50% - 505px);
+      }
+      position: relative;
+      > div {
+        border: solid 4px $trace;
+        border-radius: 50px;
+        position: absolute;
+      }
+      .traceL1 {
+        width: 50%;
+        height: 150px;
+        top: 250px;
+        left: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+        border-left: none;
+        border-top: none;
+      }
+      .traceL2 {
+        width: 50%;
+        left: 50%;
+        height: 100px;
+        top: 200px;
+        border-bottom: none;
+        border-right: none;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+
+      }
+      .traceR1 {
+        width: 50%;
+        left: 50%;
+        height: 100px;
+        top: 395px;
+        border-top: none;
+        border-right: none;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0;
+      }
+      .traceR2 {
+        width: 50%;
+        height: 350px;
+        top: 100px;
+        left: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-left: none;
+        border-bottom: none;
+
+      }
+    }
+    .learnmore {
+      width: 100%;
+      position: relative;
+      margin-bottom: 75px;
+      .traces {
+        height: 30px;
+        > div {
+          border: solid 4px $trace;
+          border-radius: 50px;
+          position: absolute;
+        }
+        .trace1 {
+          width: 660px;
+          left: 50%;
+          height: 100px;
+          border-top: none;
+          border-right: none;
+          border-bottom-right-radius: 0;
+          border-top-left-radius: 0;
+        }
+        .dot {
+          width: 15px;
+          height: 15px;
+          border-style: solid;
+          border-radius: 50%;
+          background: $white;
+          border-color: #BBB;
+          z-index: 9;
+          left: 760px;
+          top: 90px;
+        }
+      }
+      .buy {
+        position: relative;
+        width: 400px;
+        margin: 0 auto;
+        margin-top: 40px;
+        text-align: center;
+        a {
+          padding: 16px 0 12px 0;
+          line-height: 32px;
+          display: block;
+          text-align: center;
+          font-size: 22px;
+        }
+        &.no-button {
+          margin-bottom: 125px;
+        }
+      }
+    }
+    .news {
+      h2 {
+        text-align: center;
+      }
+    }
+    .featured-posts {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      .single-post {
+        width: 25%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 25px;
+        border: solid 4px $trace;
+        @include breakpoint(mobile){
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        a {
+          text-decoration: none;
+        }
+        h3 {
+          background: $bluetrans;
+          position: absolute;
+          bottom: 0;
+          text-align: center;
+          width: 100%;
+          font-size: 16px;
+          color: $white;
+          padding: 7px;
+          margin: 0;
+        }
+        .image {
+          overflow: hidden;
+          height: 175px;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

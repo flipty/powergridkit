@@ -3,68 +3,47 @@
     "title": "Home Content",
     "fields": [
         {
-            "key": "field_606a8c65b5e74",
-            "label": "Headline",
-            "name": "headline",
-            "type": "textarea",
-            "instructions": "",
+            "key": "field_618b14ccf8502",
+            "label": "Intro Content",
+            "name": "intro_content",
+            "type": "wysiwyg",
+            "instructions": "Use only Heading 1 and Paragraphs",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 2,
-            "new_lines": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
-            "key": "field_5caba5460cd43",
-            "label": "Featured Episodes",
-            "name": "carousel_items",
-            "type": "repeater",
-            "instructions": "Leave empty to use the latest 6 episodes",
+            "key": "field_618b150732139",
+            "label": "Intro Image",
+            "name": "intro_image",
+            "type": "image",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "Add Episode",
-            "sub_fields": [
-                {
-                    "key": "field_5caba55c0cd44",
-                    "label": "Episode",
-                    "name": "episode",
-                    "type": "post_object",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "post"
-                    ],
-                    "taxonomy": [
-                        "category:episode"
-                    ],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "return_format": "id",
-                    "ui": 1
-                }
-            ]
+            "return_format": "id",
+            "preview_size": "medium_large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_6081cab650a5b",
@@ -83,47 +62,47 @@
             "height": ""
         },
         {
-            "key": "field_60b2d00e2663b",
-            "label": "About Content",
-            "name": "about_content",
-            "type": "wysiwyg",
-            "instructions": "",
+            "key": "field_61992cf3fa02c",
+            "label": "More Info Button Text",
+            "name": "more_info_button_text",
+            "type": "text",
+            "instructions": "Limit to 50 characters or less",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_6081c6a5c296a",
-            "label": "Reviews Headline",
-            "name": "reviews_headline",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "placeholder": "",
-            "maxlength": "",
-            "rows": 1,
-            "new_lines": ""
+            "prepend": "",
+            "append": "",
+            "maxlength": 50
         },
         {
-            "key": "field_5e2ca2ae52003",
-            "label": "Reviews",
-            "name": "reviews",
+            "key": "field_61992cfffa02d",
+            "label": "More Info Button Link",
+            "name": "more_info_button_link",
+            "type": "page_link",
+            "instructions": "If this is left blank, the button itself will not appear",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 1,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_618b15383213a",
+            "label": "Home News Stories",
+            "name": "home_news_stories",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -135,15 +114,15 @@
             },
             "collapsed": "",
             "min": 0,
-            "max": 0,
-            "layout": "block",
-            "button_label": "Add Review",
+            "max": 4,
+            "layout": "row",
+            "button_label": "Add Story",
             "sub_fields": [
                 {
-                    "key": "field_5e2ca2e852005",
-                    "label": "Review Headline",
-                    "name": "review_headline",
-                    "type": "text",
+                    "key": "field_6196c668476cf",
+                    "label": "Story",
+                    "name": "story",
+                    "type": "post_object",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -152,150 +131,19 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5e2ca2bb52004",
-                    "label": "Review Text",
-                    "name": "review_text",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
-                },
-                {
-                    "key": "field_5e2ca68b03e21",
-                    "label": "Review Author",
-                    "name": "review_author",
-                    "type": "text",
-                    "instructions": "Leave blank for no attribution",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
-        },
-        {
-            "key": "field_6081c61bd52a3",
-            "label": "Reviews Content",
-            "name": "reviews_content",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_607f67c851c0f",
-            "label": "Featured Products",
-            "name": "featured_products",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 0,
-            "max": 3,
-            "layout": "block",
-            "button_label": "Add Product",
-            "sub_fields": [
-                {
-                    "key": "field_607f67d651c10",
-                    "label": "Link",
-                    "name": "link",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_607f67eb51c11",
-                    "label": "Image",
-                    "name": "image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
+                    "post_type": [
+                        "post",
+                        "page",
+                        "partner",
+                        "product"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
                     "return_format": "id",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
+                    "ui": 1
                 }
             ]
-        },
-        {
-            "key": "field_6081c7ac89f9c",
-            "label": "Consulting Content",
-            "name": "consulting_content",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
         }
     ],
     "location": [
@@ -303,7 +151,7 @@
             {
                 "param": "page",
                 "operator": "==",
-                "value": "193"
+                "value": "6"
             }
         ]
     ],
@@ -317,5 +165,6 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1622331441
+    "show_in_rest": 0,
+    "modified": 1637429299
 }

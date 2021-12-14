@@ -21,7 +21,7 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav>
 			<div class="buy">
-				<a href="#"><span>BUY THE KIT</span><img src="/wp-content/themes/powergridkit/img/cart.svg" alt=""></a>
+				<a href="/buy"><span>BUY THE KIT</span><img src="/wp-content/themes/powergridkit/img/cart.svg" alt=""></a>
 			</div>
 			<button class="hamburger">
 				<span class="t"></span>

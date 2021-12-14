@@ -14,7 +14,7 @@ get_header();
     <?php
 
     $query = new WP_Query( array(
-        'post_type' => 'blogentry',
+        'post_type' => 'post',
         'posts_per_page' => -1,
         'order' => 'DESC'
     ) );
@@ -26,7 +26,7 @@ get_header();
     <div class="container">
 
         <h1><?php echo get_the_title();?></h1>
-
+        <?php the_content();?>
         <div class="content-area">
             <div class="blog-posts">
             <?php

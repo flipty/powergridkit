@@ -334,6 +334,27 @@ footer {
               }
             }
           }
+          .mc4wp-response {
+            margin-top: 20px;
+            .mc4wp-alert {
+              background: $green;
+              border-radius: 8px;
+              color: $white;
+              position: relative;
+              padding: 5px 15px;
+              left: -15px;
+              text-align: center;
+              width: 650px;
+              &.mc4wp-success {
+                background: $green;
+                color: $white;
+              }
+              &.mc4wp-error {
+                background: darken($orange, 25%);
+                color: $white;
+              }
+            }
+          }
         }
       }
       .image {
@@ -381,6 +402,43 @@ footer {
       &:hover {
         color: $blue;
       }
+    }
+  }
+}
+
+.buy { //buy button
+  width: 200px;
+  padding-right: 10px;
+  @include breakpoint(mobile){
+    display: none;
+  }
+  a {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    background: $button;
+    border: solid 2px $bluelite;
+    border-radius: 50px;
+    padding: 8px 20px 8px 20px;
+    color: $white;
+    text-decoration: none;
+    transition: all 250ms;
+    span {
+      font-size: 14px;
+      line-height: 17px;
+      position: relative;
+      top: 2px;
+      border-right: solid 2px $bluelite;
+      padding-right: 30px;
+      padding-left: 10px;
+    }
+    img {
+      filter: invert(1);
+      width: 20px;
+      margin-left: auto;
+    }
+    &:hover {
+      background: darken($blue, 15%);
     }
   }
 }

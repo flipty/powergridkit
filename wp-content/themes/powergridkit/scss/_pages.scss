@@ -12,7 +12,7 @@ main {
         @include breakpoint(desktop){
           width: 672px;
           margin-left: auto;
-          margin-right: auto;          
+          margin-right: auto;
         }
       }
     }
@@ -20,7 +20,7 @@ main {
       height: auto;
     }
     iframe {
-      margin-top: 40px;
+      // margin-top: 40px;
       border-radius: 20px;
       @include breakpoint(desktop){
         // margin-left: -175px;
@@ -36,6 +36,9 @@ main {
     text-align: center;
     font-weight: 400;
     margin-top: 1em;
+  }
+  p {
+    line-height: 1.7em;
   }
 }
 
@@ -92,6 +95,144 @@ main {
       }
       img {
         height: auto;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.single-post {
+  p {
+    line-height: 1.7;
+  }
+  .wp-block-pullquote {
+    padding: 0;
+    border: solid 4px $trace;
+    border-radius: 50px;
+    border-right: none;
+    border-bottom: none;
+    margin-top: 2em;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative;
+    p {
+      color: $blue;
+      letter-spacing: -0.05em;
+      font-weight: bold;
+    }
+    &:before {
+      display: block;
+      content: '';
+      width: 16px;
+      height: 16px;
+      background: $white;
+      border: solid 4px #CCC;
+      border-radius: 50px;
+      position: absolute;
+      right: 0;
+      top: -15px;
+    }
+    &:after {
+      display: block;
+      content: '';
+      width: 16px;
+      height: 16px;
+      background: $white;
+      border: solid 4px #CCC;
+      border-radius: 50px;
+      position: relative;
+      left: -15px;
+    }
+  }
+  iframe {
+    width: 100%;
+    @include breakpoint(desktop){
+      height: 560px;
+
+    }
+  }
+  figcaption {
+    text-align: center;
+    font-size: 14px;
+
+  }
+}
+
+.single-product {
+  .product-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    .images {
+      width: 50%;
+      overflow: hidden;
+      @include breakpoint(mobile){
+        order: 2;
+      }
+      ul.image-choices {
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        li {
+          max-width: 100px;
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+      .main-image {
+        overflow: hidden;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        img {
+          max-width: 100%;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .content {
+      width: 50%;
+      @include breakpoint(mobile){
+        order: 1;
+      }
+      > * {
+        padding-left: 30px;
+        @include breakpoint(mobile){
+          padding-left: 0;
+        }
+      }
+      h1 {
+        text-align: left;
+      }
+      h2 {
+        color: $purple;
+        &.sale {
+          color: $green;
+          font-size: 34px;
+          span {
+            padding-right: 10px;
+            text-decoration: line-through;
+            color: $red;
+            font-size: 0.60em;
+          }
+        }
+      }
+      ul {
+        padding-left: 50px;
+      }
+      p, ul li {
+        line-height: 1.7em;
+      }
+      &.no-image {
+        width: 100%;
+      }
+    }
+    .images, .content {
+      @include breakpoint(mobile){
         width: 100%;
       }
     }

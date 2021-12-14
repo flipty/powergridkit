@@ -9,8 +9,8 @@
             <img src="/wp-content/themes/powergridkit/img/rss.svg" alt="RSS icon">
           </div>
           <div class="text">
-            <h3>Stay up to date</h3>
-            <p>Receive monthly product updates you can share with your students</p>
+            <h3><?php echo get_field('newsletter_headline', 'options');?></h3>
+            <p><?php echo get_field('newsletter_paragraph', 'options');?></p>
           </div>
           <div class="form">
             <?php echo do_shortcode('[mc4wp_form id="30"]');?>
@@ -23,8 +23,8 @@
     </div>
     <div class="links">
       <a href="mailto: support@powergridkit.com" class="email">support@powergridkit.com</a>
-      <a href="#">Terms</a>
-      <a href="#">Privacy</a>
+      <a href="/terms">Privacy & Terms</a>
+      <!-- <a href="/privacy">Privacy</a> -->
       <span>St. Paul, MN</span>
     </div>
   </div>
