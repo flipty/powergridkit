@@ -1152,7 +1152,8 @@ main p {
 
 .single-product .product-info .images .main-image img {
   max-width: 100%;
-  width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
   height: auto;
 }
 
@@ -1212,4 +1213,100 @@ main p {
   .single-product .product-info .images, .single-product .product-info .content {
     width: 100%;
   }
+}
+
+.page-template-template-blogentries .blog-posts {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.page-template-template-blogentries .blog-posts .blogentry {
+  width: 30%;
+}
+
+.page-template-template-blogentries .blog-posts .blogentry a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 999px) {
+  .page-template-template-blogentries .blog-posts .blogentry {
+    width: 100%;
+  }
+}
+
+.page-template-template-blogentries .blog-posts .blogentry h4 {
+  margin-bottom: 5px;
+  color: #6f6f6f;
+}
+
+.page-template-template-blogentries .blog-posts .blogentry h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.page-template-template-blogentries .blog-posts .blogentry p {
+  color: #6f6f6f;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.page-template-template-blogentries .blog-posts .blogentry .image {
+  width: 100%;
+  text-align: center;
+}
+
+.page-template-template-blogentries .blog-posts .blogentry .image img {
+  margin: 0 auto;
+}
+
+.page-template-template-buy .products {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.page-template-template-buy .products .product {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.page-template-template-buy .products .product.S {
+  width: 25%;
+}
+
+.page-template-template-buy .products .product.M {
+  width: 33%;
+}
+
+.page-template-template-buy .products .product.L {
+  width: 50%;
+}
+
+.page-template-template-buy .products .product.XL {
+  width: 100%;
+}
+
+.page-template-template-buy .products .product a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.page-template-template-buy .products .product a span.price {
+  font-size: 0.75em;
+  color: #6f6f6f;
+}
+
+.page-template-template-buy .products .product a span.price .normal-price {
+  color: #2bd832;
+  margin-right: 15px;
+}
+
+.page-template-template-buy .products .product a span.price.sale {
+  color: #CC4433;
+}
+
+.page-template-template-buy .products .product a span.price.sale .normal-price {
+  text-decoration: none !important;
 }

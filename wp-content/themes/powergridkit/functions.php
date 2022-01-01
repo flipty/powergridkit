@@ -13,7 +13,7 @@ define("WP_ALLOW_COMMENTS", false);
 
 // how many words is in a standard excerpt?
 add_filter( 'excerpt_length', function($length) {
-    return 100;
+    return 30;
 } );
 
 // change the default "[...]" for excerpts
