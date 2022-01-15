@@ -29,7 +29,7 @@ get_header();
             $url = get_the_permalink($product);
           ?>
           <div class="product <?php echo $size;?>">
-              <a href="<?php echo $url;?>" target="_blank">
+              <a href="<?php echo $url;?>">
                 <?php echo get_the_post_thumbnail($product, 'srcset'); ?>
                 <h2>
                   <?php
